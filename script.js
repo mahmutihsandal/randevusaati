@@ -2,6 +2,14 @@ const billingButtons = document.querySelectorAll("[data-billing]");
 const priceValues = document.querySelectorAll("[data-price]");
 const periodLabels = document.querySelectorAll("[data-period]");
 const faqButtons = document.querySelectorAll(".faq-item button");
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+const screenCards = document.querySelectorAll("[data-modal-image]");
+const screenModal = document.querySelector(".screen-modal");
+const screenModalImage = document.querySelector("#screen-modal-image");
+const screenModalTitle = document.querySelector("#screen-modal-title");
+const screenModalCopy = document.querySelector("#screen-modal-copy");
+const modalClose = document.querySelector(".modal-close");
 
 function setBilling(period) {
   billingButtons.forEach((button) => {
@@ -23,6 +31,62 @@ billingButtons.forEach((button) => {
   button.addEventListener("click", () => {
     setBilling(button.dataset.billing);
   });
+});
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", String(!isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Menüyü aç" : "Menüyü kapat");
+    navLinks.classList.toggle("is-open", !isOpen);
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Menüyü aç");
+      navLinks.classList.remove("is-open");
+    });
+  });
+}
+
+function openScreenModal(card) {
+  if (!screenModal || !screenModalImage || !screenModalTitle || !screenModalCopy) return;
+
+  screenModalImage.src = card.dataset.modalImage;
+  screenModalImage.alt = card.dataset.modalTitle || "";
+  screenModalTitle.textContent = card.dataset.modalTitle || "";
+  screenModalCopy.textContent = card.dataset.modalCopy || "";
+
+  if (typeof screenModal.showModal === "function") {
+    screenModal.showModal();
+  } else {
+    screenModal.setAttribute("open", "");
+  }
+}
+
+function closeScreenModal() {
+  if (!screenModal) return;
+
+  if (typeof screenModal.close === "function") {
+    screenModal.close();
+  } else {
+    screenModal.removeAttribute("open");
+  }
+}
+
+screenCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    openScreenModal(card);
+  });
+});
+
+modalClose?.addEventListener("click", closeScreenModal);
+
+screenModal?.addEventListener("click", (event) => {
+  if (event.target === screenModal) {
+    closeScreenModal();
+  }
 });
 
 faqButtons.forEach((button) => {

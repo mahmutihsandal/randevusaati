@@ -20,7 +20,7 @@ http://localhost:4173
 
 - `index.html`: single-page product website
 - `styles.css`: responsive visual system
-- `script.js`: mobile navigation, pricing toggle, FAQ accordion, and screenshot modal
+- `script.js`: mobile navigation, pricing toggle, and screenshot modal
 - `ROADMAP.md`: UI/UX roadmap, asset policy, and deferred verification notes
 - `assets/screens`: optimized app screenshots grouped by flow
 - `assets/brand`: logo and social preview image

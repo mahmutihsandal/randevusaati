@@ -1,7 +1,6 @@
 const billingButtons = document.querySelectorAll("[data-billing]");
 const priceValues = document.querySelectorAll("[data-price]");
 const periodLabels = document.querySelectorAll("[data-period]");
-const faqButtons = document.querySelectorAll(".faq-item button");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
 const screenCards = document.querySelectorAll("[data-modal-image]");
@@ -87,16 +86,4 @@ screenModal?.addEventListener("click", (event) => {
   if (event.target === screenModal) {
     closeScreenModal();
   }
-});
-
-faqButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const isExpanded = button.getAttribute("aria-expanded") === "true";
-
-    faqButtons.forEach((otherButton) => {
-      otherButton.setAttribute("aria-expanded", "false");
-    });
-
-    button.setAttribute("aria-expanded", String(!isExpanded));
-  });
 });

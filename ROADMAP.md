@@ -44,10 +44,31 @@ Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren
 - Müşteri tarafı: Güncel ekran görüntüleri kullanılabilir ve kullanılmalı.
 - Admin tarafı: Güncel screenshot gelene kadar placeholder/mock UI kullanılacak.
 - Kurulum videosu: Şimdilik video alanı boş/placeholder kalacak.
+- Codex yeni screenshot alarak inceleme yapmayacak. Kullanıcı açıkça izin vermedikçe sadece kullanıcının paylaştığı görseller incelenecek.
 - Yeni ekran görüntüleri geldiğinde hedef klasör:
   - `assets/screens/user-current/`
   - `assets/screens/admin-current/`
   - `assets/video/`
+
+## 2026-07-07 Görsel Geri Bildirim Notu
+
+Kullanıcının paylaştığı canlı site görsellerine göre mevcut tasarım modern SaaS/ürün landing hissinden uzak; portfolio/screenshot galerisi gibi algılanıyor. Temel problemler:
+
+- Ekran görüntüleri fazla büyük, kırpılmış ve sayfanın ana tasarım öğesi gibi davranıyor.
+- Tipografi aşırı iri ve içerik, ürünü satmak yerine tasarım kusurunu büyütüyor.
+- Müşteri akışı bölümü ekran kartı vitrini gibi; ürün değer önerisi, dönüşüm ve güven hissi zayıf.
+- Hero bölümü daha iyi olsa da hâlâ modern, rafine, premium bir landing standardına ulaşmıyor.
+- Bundan sonraki çalışma screenshot sergilemek yerine tasarım sistemi, net CTA, premium hero, kısa değer blokları, daha kontrollü ürün mockup'ları ve dönüşüm akışı üzerine kurulacak.
+
+## Yeni Tasarım Yönü
+
+- Sayfa modern SaaS/ürün landing gibi tasarlanacak; portfolio, ekran galerisi veya app-store vitrin mantığı kullanılmayacak.
+- Ekran görüntüleri ana içerik olmayacak. Sadece hero içinde ve küçük proof alanlarında kontrollü kullanılacak.
+- Müşteri akışı bölümü büyük telefon kartları yerine kompakt adım kartları ve küçük ürün önizlemeleriyle anlatılacak.
+- Admin tarafı tek tek kart yığını yerine güçlü bir dashboard mock kompozisyonuyla gösterilecek.
+- Tipografi daha kontrollü olacak: büyük başlık sadece hero'da, alt bölümlerde daha rafine ölçüler.
+- İlk ekranın amacı: ne işe yarıyor, kime yarıyor, nasıl demo alınır sorularını hızlı cevaplamak.
+- Bölüm sırası: hero, güven/değer şeridi, kısa randevu akışı, işletme paneli, kurulum/geçiş, paketler, SSS.
 
 ## Bu Aşamada Bilerek Ertelenenler
 

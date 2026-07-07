@@ -3,7 +3,6 @@ const priceValues = document.querySelectorAll("[data-price]");
 const periodLabels = document.querySelectorAll("[data-period]");
 const navToggle = document.querySelector(".nav-toggle");
 const navLinks = document.querySelector(".nav-links");
-const screenCards = document.querySelectorAll("[data-modal-image]");
 const screenModal = document.querySelector(".screen-modal");
 const screenModalImage = document.querySelector("#screen-modal-image");
 const screenModalTitle = document.querySelector("#screen-modal-title");
@@ -15,7 +14,7 @@ function setBilling(period) {
   billingButtons.forEach((button) => {
     const isActive = button.dataset.billing === period;
     button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-selected", String(isActive));
+    button.setAttribute("aria-pressed", String(isActive));
   });
 
   priceValues.forEach((price) => {
@@ -58,33 +57,35 @@ function openScreenModal(card) {
   screenModalTitle.textContent = card.dataset.modalTitle || "";
   screenModalCopy.textContent = card.dataset.modalCopy || "";
 
-  if (typeof screenModal.showModal === "function") {
-    screenModal.showModal();
-  } else {
-    screenModal.setAttribute("open", "");
-  }
+  screenModal.hidden = false;
+  document.body.classList.add("is-modal-open");
+  modalClose?.focus();
 }
 
 function closeScreenModal() {
   if (!screenModal) return;
 
-  if (typeof screenModal.close === "function") {
-    screenModal.close();
-  } else {
-    screenModal.removeAttribute("open");
-  }
+  screenModal.hidden = true;
+  document.body.classList.remove("is-modal-open");
 }
 
-screenCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    openScreenModal(card);
-  });
+document.addEventListener("click", (event) => {
+  const card = event.target.closest?.("[data-modal-image]");
+  if (!card) return;
+
+  openScreenModal(card);
 });
 
 modalClose?.addEventListener("click", closeScreenModal);
 
 screenModal?.addEventListener("click", (event) => {
   if (event.target === screenModal) {
+    closeScreenModal();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && screenModal && !screenModal.hidden) {
     closeScreenModal();
   }
 });

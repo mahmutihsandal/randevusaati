@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Randevu Saati | Salonlar için online randevu ve işletme yönetimi</title>
-  <meta name="description" content="Randevu Saati; kuaför, berber ve güzellik salonları için online randevu, haftalık takvim, personel yönetimi ve kazanç takibini tek yerde toplar.">
+  <meta name="description" content="Randevu Saati; kuaför, berber ve güzellik salonları için online randevu, haftalık takvim, personel yönetimi ve kazanç takibini tek panelde toplar.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mahmutihsandal.github.io/randevusaati/">
   <meta property="og:title" content="Randevu Saati">
@@ -14,7 +14,7 @@
   <meta name="theme-color" content="#f7fbf9">
   <link rel="icon" href="./assets/brand/app-logo.png">
   <link rel="preload" as="image" href="./assets/marketing/home-poster.png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=20260708-1">
 </head>
 <body>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -31,6 +31,7 @@
       <a href="#panel">Panel</a>
       <a href="#kurulum">Kurulum</a>
       <a href="#paketler">Paketler</a>
+      <a href="#sss">SSS</a>
     </nav>
 
     <div class="header-actions">
@@ -47,18 +48,18 @@
     <section id="top" class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Salonlar için online randevu sistemi</p>
-        <h1 id="hero-title">Randevular online alınsın, salon akışı tek panelden yönetilsin.</h1>
-        <p class="hero-lead">Müşteri salonu, hizmeti, personeli ve uygun saati kendi seçer. Siz günlük randevuları, haftalık takvimi, izin günlerini ve kazancı tek ekranda takip edersiniz.</p>
+        <h1 id="hero-title">Online randevu alın, salonu tek panelden yönetin.</h1>
+        <p class="hero-lead">Müşteri salonu, hizmeti, personeli ve uygun saati kendi seçer. Siz günlük randevuları, haftalık takvimi, kapalı saatleri ve kazancı aynı panelden takip edersiniz.</p>
 
         <div class="hero-actions" aria-label="Öne çıkan işlemler">
           <a class="primary-action" href="mailto:randevusaatidestek@gmail.com?subject=Randevu%20Saati%20Demo%20Talebi">Demo talep et</a>
-          <a class="secondary-action" href="#akis">Randevu akışını gör</a>
+          <a class="secondary-action" href="#panel">Paneli incele</a>
         </div>
 
         <div class="hero-proof" aria-label="Öne çıkan ürün alanları">
-          <div><strong>7/24</strong><span>Müşteri randevu alımı</span></div>
-          <div><strong>1 hafta</strong><span>Yakın tarih planlama</span></div>
-          <div><strong>Tek panel</strong><span>Takvim, ayar ve muhasebe</span></div>
+          <div><strong>7/24</strong><span>Online randevu vitrini</span></div>
+          <div><strong>Haftalık</strong><span>Takvim ve doluluk görünümü</span></div>
+          <div><strong>Net</strong><span>Personel ve kazanç takibi</span></div>
         </div>
       </div>
 
@@ -68,6 +69,20 @@
         </div>
 
         <div class="dashboard-preview">
+          <div class="window-bar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="preview-heading">
+            <div>
+              <span>İşletme paneli</span>
+              <strong>Bugünün akışı</strong>
+            </div>
+            <small>Canlı</small>
+          </div>
+
           <div class="preview-top">
             <div>
               <span>Bugün</span>
@@ -92,6 +107,11 @@
             </div>
           </div>
         </div>
+
+        <div class="scene-note" aria-label="Yeni randevu bildirimi">
+          <span>Yeni randevu</span>
+          <strong>12:00 Saç Kesimi</strong>
+        </div>
       </div>
     </section>
 
@@ -105,17 +125,17 @@
         <article>
           <span>01</span>
           <h3>Müşteri beklemeden randevu alır</h3>
-          <p>Salon, hizmet, personel ve uygun saatler mobilde net görünür.</p>
+          <p>Salon vitrini, hizmetler, personel ve uygun saatler mobilde net görünür.</p>
         </article>
         <article>
           <span>02</span>
-          <h3>Salon günü daha okunur hale gelir</h3>
+          <h3>Salon günü daha okunur olur</h3>
           <p>Bugünkü ve yakın tarihli randevular aynı işletme düzeninde toplanır.</p>
         </article>
         <article>
           <span>03</span>
-          <h3>Kazanç ve personel takibi görünür olur</h3>
-          <p>Haftalık/aylık randevu sayısı, gelir ve personel bazlı performans izlenir.</p>
+          <h3>Kazanç ve performans görünür olur</h3>
+          <p>Haftalık/aylık gelir, randevu sayısı ve personel bazlı performans izlenir.</p>
         </article>
       </div>
     </section>
@@ -125,40 +145,42 @@
         <div class="section-heading">
           <p class="eyebrow">Müşteri randevu akışı</p>
           <h2 id="flow-title">Müşteri aramadan randevuyu tamamlar.</h2>
-          <p>Vitrin, hizmet ve saat seçimi tek akışta ilerler. İşletme tarafında randevu düzeni bozulmadan yeni talepler panele düşer.</p>
+          <p>Randevu talebi mesaj trafiğine dönüşmeden tamamlanır. Müşteri ne alacağını, kiminle alacağını ve hangi saatin uygun olduğunu aynı akışta görür.</p>
         </div>
 
-        <div class="flow-steps" aria-label="Müşteri randevu adımları">
-          <article>
-            <span>1</span>
-            <h3>Vitrini açar</h3>
-            <p>Salon bilgileri, konum, personel ve öne çıkan hizmetler güven veren tek ekranda görünür.</p>
-          </article>
-          <article>
-            <span>2</span>
-            <h3>Hizmeti seçer</h3>
-            <p>Süre, fiyat ve uygun personel bilgisi net olduğu için müşteri kararını beklemeden verir.</p>
-          </article>
-          <article>
-            <span>3</span>
-            <h3>Saati onaylar</h3>
-            <p>Müsait saatler seçime hazır gelir; onay sonrası randevu detayı hem müşteride hem panelde netleşir.</p>
-          </article>
-        </div>
+        <div class="flow-board">
+          <div class="flow-steps" aria-label="Müşteri randevu adımları">
+            <article>
+              <span>1</span>
+              <h3>Salon vitrinini açar</h3>
+              <p>Konum, güven bilgisi, personel ve hizmetler ilk ekranda anlaşılır.</p>
+            </article>
+            <article>
+              <span>2</span>
+              <h3>Hizmet ve personel seçer</h3>
+              <p>Süre, fiyat ve uygun personel bilgisi karar sürecini hızlandırır.</p>
+            </article>
+            <article>
+              <span>3</span>
+              <h3>Saati onaylar</h3>
+              <p>Uygun saat seçilir, randevu hem müşteride hem panelde netleşir.</p>
+            </article>
+          </div>
 
-        <div class="mini-screens" aria-label="Müşteri uygulaması poster görselleri">
-          <button type="button" data-modal-image="./assets/marketing/home-poster.png" data-modal-title="Salon vitrini" data-modal-copy="Müşteri salonu, hizmetleri ve randevu çağrısını tek ekranda görür.">
-            <img src="./assets/marketing/home-poster.png" alt="Salon vitrini poster görseli" width="558" height="1100" loading="lazy" decoding="async">
-            <span>Salon vitrini</span>
-          </button>
-          <button type="button" data-modal-image="./assets/marketing/services-poster.png" data-modal-title="Hizmet seçimi" data-modal-copy="Hizmet, süre ve fiyat bilgisi randevu kararını sadeleştirir.">
-            <img src="./assets/marketing/services-poster.png" alt="Hizmet seçimi poster görseli" width="558" height="1100" loading="lazy" decoding="async">
-            <span>Hizmet seçimi</span>
-          </button>
-          <button type="button" data-modal-image="./assets/marketing/calendar-poster.png" data-modal-title="Tarih ve saat" data-modal-copy="Müşteri uygun tarihi ve saati kendi seçer.">
-            <img src="./assets/marketing/calendar-poster.png" alt="Tarih ve saat poster görseli" width="558" height="1100" loading="lazy" decoding="async">
-            <span>Tarih ve saat</span>
-          </button>
+          <div class="mini-screens" aria-label="Müşteri uygulaması poster görselleri">
+            <button type="button" data-modal-image="./assets/marketing/home-poster.png" data-modal-title="Salon vitrini" data-modal-copy="Müşteri salonu, personeli, hizmetleri ve randevu çağrısını tek ekranda görür.">
+              <img src="./assets/marketing/home-poster.png" alt="Salon vitrini poster görseli" width="558" height="1100" loading="lazy" decoding="async">
+              <span>Salon vitrini</span>
+            </button>
+            <button type="button" data-modal-image="./assets/marketing/services-poster.png" data-modal-title="Hizmet seçimi" data-modal-copy="Hizmet, süre ve fiyat bilgisi randevu kararını sadeleştirir.">
+              <img src="./assets/marketing/services-poster.png" alt="Hizmet seçimi poster görseli" width="558" height="1100" loading="lazy" decoding="async">
+              <span>Hizmet seçimi</span>
+            </button>
+            <button type="button" data-modal-image="./assets/marketing/calendar-poster.png" data-modal-title="Tarih ve saat" data-modal-copy="Müşteri uygun tarihi ve saati kendi seçer, işletme takvimi otomatik güncellenir.">
+              <img src="./assets/marketing/calendar-poster.png" alt="Tarih ve saat poster görseli" width="558" height="1100" loading="lazy" decoding="async">
+              <span>Tarih ve saat</span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -169,6 +191,11 @@
           <p class="eyebrow">İşletme paneli</p>
           <h2 id="panel-title">Günü, haftayı ve kazancı aynı işletme panelinden takip edin.</h2>
           <p>Bugünkü randevular, haftalık doluluk, kapalı saatler, muhasebe özeti ve personel bazlı kazançlar salon sahibinin karar almasını kolaylaştırır.</p>
+          <div class="panel-feature-list" aria-label="İşletme paneli özellikleri">
+            <article><strong>Haftalık takvim</strong><span>Tüm haftayı tek bakışta görün.</span></article>
+            <article><strong>Kapalı saat yönetimi</strong><span>İzin, mola ve kapalı günleri yönetin.</span></article>
+            <article><strong>Kazanç takibi</strong><span>Geliri ve personel performansını izleyin.</span></article>
+          </div>
         </div>
 
         <div class="admin-dashboard" aria-label="İşletme paneli mock görünümü">
@@ -206,24 +233,29 @@
 
     <section id="kurulum" class="section section-setup" aria-labelledby="setup-title">
       <div class="section-inner setup-layout">
-        <div class="video-card" aria-label="Kurulum özeti">
-          <div class="onboarding-card">
+        <div class="setup-showcase" aria-label="Kurulum özeti">
+          <div class="launch-card">
             <p class="eyebrow">Kurulum özeti</p>
-            <strong>Salon vitrininizi yayına hazırlarız.</strong>
-            <p>Demo sonrası işletme bilgileri, personel, hizmetler ve çalışma saatleri netleşir; müşterinin randevu alacağı vitrin hazırlanır.</p>
-            <div class="onboarding-preview" aria-label="Kurulum kapsamı">
-              <span>Profil</span>
-              <span>Personel</span>
-              <span>Hizmet</span>
-              <span>Takvim</span>
+            <strong>Salon vitrininiz yayına hazır hale gelir.</strong>
+            <p>Demo sonrası işletme bilgileri, personel, hizmetler ve çalışma saatleri netleşir. Randevu vitrini müşteriye hazır şekilde açılır.</p>
+            <div class="setup-progress" aria-label="Kurulum ilerleme durumu">
+              <span><i style="--w: 100%"></i></span>
+              <small>Canlı vitrine hazır</small>
             </div>
+          </div>
+
+          <div class="setup-mini-grid" aria-label="Kurulum kapsamı">
+            <div><span>01</span><strong>Profil</strong><small>Salon bilgileri ve konum</small></div>
+            <div><span>02</span><strong>Personel</strong><small>Ekip ve yetkinlikler</small></div>
+            <div><span>03</span><strong>Hizmet</strong><small>Süre, fiyat ve kategori</small></div>
+            <div><span>04</span><strong>Takvim</strong><small>Çalışma düzeni</small></div>
           </div>
         </div>
 
         <div class="section-heading">
           <p class="eyebrow">Siz de Randevu Saati'ne geçin</p>
           <h2 id="setup-title">Demo talebinden canlı randevu vitrinine net bir geçiş.</h2>
-          <p>Profil, personel, hizmet, çalışma düzeni ve randevu vitrini birlikte hazırlanır. Salon yayına çıktığında müşteri doğrudan randevu almaya başlar.</p>
+          <p>Kurulum süreci satış sonrasında boş bırakılmaz. İşletme bilgileri, hizmetler, personel ve çalışma düzeni birlikte hazırlanır.</p>
           <ol class="setup-steps" aria-label="Kurulum adımları">
             <li><span>01</span><strong>İşletme profili</strong><small>Salon bilgileri, konum ve kategori.</small></li>
             <li><span>02</span><strong>Personel ve hizmetler</strong><small>Süre, fiyat ve personel eşleşmeleri.</small></li>
@@ -242,9 +274,9 @@
             <h2 id="pricing-title">İşletmenize uygun paketi seçin.</h2>
             <p>Tek çalışanlı salonlardan yoğun ekiplere kadar, randevu ve işletme yönetimini büyüklüğünüze göre kademelendirin.</p>
           </div>
-          <div class="billing-toggle" role="tablist" aria-label="Fiyat periyodu">
-            <button type="button" class="billing-button is-active" data-billing="monthly" aria-selected="true">Aylık</button>
-            <button type="button" class="billing-button" data-billing="yearly" aria-selected="false">Yıllık <span>%20 avantaj</span></button>
+          <div class="billing-toggle" role="group" aria-label="Fiyat periyodu">
+            <button type="button" class="billing-button is-active" data-billing="monthly" aria-pressed="true">Aylık</button>
+            <button type="button" class="billing-button" data-billing="yearly" aria-pressed="false">Yıllık <span>%20 avantaj</span></button>
           </div>
         </div>
 
@@ -310,7 +342,43 @@
             </ul>
           </article>
         </div>
+
+        <div class="pricing-assurance" aria-label="Paket kapsamı özeti">
+          <span>Kurulum desteği</span>
+          <span>Online randevu vitrini</span>
+          <span>Mobil uyumlu deneyim</span>
+          <span>Paket yükseltme imkanı</span>
+        </div>
         <p class="pricing-note">Paket fiyatları aylık toplam kullanım ücretidir. Kapsam ve kurulum ihtiyaçları işletmeye göre netleştirilebilir.</p>
+      </div>
+    </section>
+
+    <section id="sss" class="section section-faq" aria-labelledby="faq-title">
+      <div class="section-inner faq-layout">
+        <div class="section-heading">
+          <p class="eyebrow">Sık sorulan sorular</p>
+          <h2 id="faq-title">Demo öncesi en çok merak edilenler.</h2>
+          <p>Kurulum, kullanım ve paket kapsamı demo görüşmesinde işletmenizin düzenine göre netleştirilir.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Randevuları müşteri mi oluşturuyor?</summary>
+            <p>Evet. Müşteri salon vitrini üzerinden hizmeti, personeli ve uygun saati seçerek randevuyu tamamlar.</p>
+          </details>
+          <details>
+            <summary>Kapalı gün veya izin saati yönetilebilir mi?</summary>
+            <p>Evet. Çalışma düzeni, kapalı saatler ve izin günleri işletme panelinde yönetilebilir.</p>
+          </details>
+          <details>
+            <summary>Tek çalışanlı salonlar için uygun mu?</summary>
+            <p>Evet. Temel paket tek başına çalışan kuaför, berber ve güzellik uzmanları için sade bir başlangıç sunar.</p>
+          </details>
+          <details>
+            <summary>Kurulumda destek veriliyor mu?</summary>
+            <p>Evet. İşletme profili, hizmetler, personel ve çalışma saatleri demo sonrasında birlikte hazırlanır.</p>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -354,7 +422,7 @@
     <span>WhatsApp</span>
   </a>
 
-  <dialog class="screen-modal" aria-labelledby="screen-modal-title">
+  <div class="screen-modal" role="dialog" aria-modal="true" aria-labelledby="screen-modal-title" hidden>
     <button class="modal-close" type="button" aria-label="Ekran önizlemesini kapat">Kapat</button>
     <div class="modal-body">
       <img id="screen-modal-image" src="./assets/marketing/home-poster.png" alt="">
@@ -364,8 +432,8 @@
         <p id="screen-modal-copy">Müşteri salonu ve hizmetleri tek ekranda görür.</p>
       </div>
     </div>
-  </dialog>
+  </div>
 
-  <script src="./script.js"></script>
+  <script src="./script.js?v=20260708-1"></script>
 </body>
 </html>

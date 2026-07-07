@@ -206,11 +206,17 @@
 
     <section id="kurulum" class="section section-setup" aria-labelledby="setup-title">
       <div class="section-inner setup-layout">
-        <div class="video-card" aria-label="Kurulum videosu alanı">
-          <div class="video-placeholder">
-            <span class="play-mark">▶</span>
-            <strong>Kurulum videosu alanı</strong>
-            <p>Video geldiğinde bu alan gerçek tanıtım veya kurulum videosuyla değiştirilecek.</p>
+        <div class="video-card" aria-label="Kurulum özeti">
+          <div class="onboarding-card">
+            <p class="eyebrow">Kurulum özeti</p>
+            <strong>Salon vitrininizi yayına hazırlarız.</strong>
+            <p>Demo sonrası işletme bilgileri, personel, hizmetler ve çalışma saatleri netleşir; müşterinin randevu alacağı vitrin hazırlanır.</p>
+            <div class="onboarding-preview" aria-label="Kurulum kapsamı">
+              <span>Profil</span>
+              <span>Personel</span>
+              <span>Hizmet</span>
+              <span>Takvim</span>
+            </div>
           </div>
         </div>
 
@@ -233,8 +239,8 @@
         <div class="pricing-head">
           <div class="section-heading">
             <p class="eyebrow">Paketler</p>
-            <h2 id="pricing-title">İşletme büyüklüğüne göre sade abonelik seçenekleri.</h2>
-            <p>Fiyatlar ve paket kapsamı stratejiye göre güncellenebilir. Şimdilik karar vermeyi kolaylaştıran net bir yapı kullanıyoruz.</p>
+            <h2 id="pricing-title">İşletmenize uygun paketi seçin.</h2>
+            <p>Tek çalışanlı salonlardan yoğun ekiplere kadar, randevu ve işletme yönetimini büyüklüğünüze göre kademelendirin.</p>
           </div>
           <div class="billing-toggle" role="tablist" aria-label="Fiyat periyodu">
             <button type="button" class="billing-button is-active" data-billing="monthly" aria-selected="true">Aylık</button>
@@ -243,54 +249,68 @@
         </div>
 
         <div class="pricing-grid">
-          <article class="pricing-card">
-            <p class="plan-label">Başlangıç</p>
-            <h3>Küçük salonlar</h3>
-            <p class="plan-copy">Yeni başlayan ve düşük personel sayısıyla çalışan işletmeler için.</p>
-            <p class="price"><span data-price data-monthly="₺349" data-yearly="₺3.350">₺349</span><small data-period>/ay</small></p>
-            <a class="plan-action" href="mailto:randevusaatidestek@gmail.com?subject=Başlangıç%20Paket%20Talebi">Başvur</a>
+          <article class="pricing-card plan-basic">
+            <div class="plan-icon" aria-hidden="true">1</div>
+            <p class="plan-label">Temel</p>
+            <h3>Başlangıç paketi</h3>
+            <p class="price"><span data-price data-monthly="₺590" data-yearly="₺5.660">₺590</span><small data-period>/ay</small></p>
+            <p class="plan-copy">Tek başına çalışan kuaför ve berberler için online randevuya hızlı başlangıç.</p>
+            <a class="plan-action" href="mailto:randevusaatidestek@gmail.com?subject=Temel%20Paket%20Talebi">Hemen başla</a>
             <ul>
               <li>1 işletme profili</li>
-              <li>2 personele kadar</li>
               <li>Online randevu vitrini</li>
-              <li>Hizmet ve fiyat yönetimi</li>
-              <li>Günlük randevu takibi</li>
+              <li>Limitsiz randevu yönetimi</li>
+              <li>Limitsiz müşteri kaydı</li>
             </ul>
           </article>
 
-          <article class="pricing-card is-featured">
-            <p class="plan-badge">En çok tercih edilen</p>
+          <article class="pricing-card plan-growth">
+            <div class="plan-icon" aria-hidden="true">2</div>
+            <p class="plan-label">Gelişmiş</p>
+            <h3>Daha fazla kontrol</h3>
+            <p class="price"><span data-price data-monthly="₺790" data-yearly="₺7.580">₺790</span><small data-period>/ay</small></p>
+            <p class="plan-copy">Gelişen işletmeler için randevu ve takvim yönetimini daha verimli hale getiren özellikler.</p>
+            <a class="plan-action" href="mailto:randevusaatidestek@gmail.com?subject=Gelişmiş%20Paket%20Talebi">Hemen başla</a>
+            <ul>
+              <li>Temel paketteki tüm özellikler</li>
+              <li>Günlük ve haftalık takvim</li>
+              <li>Randevu iptal talebi yönetimi</li>
+              <li>Daha esnek randevu planlama</li>
+            </ul>
+          </article>
+
+          <article class="pricing-card plan-pro is-featured">
+            <p class="plan-badge">En popüler</p>
+            <div class="plan-icon" aria-hidden="true">3</div>
             <p class="plan-label">Profesyonel</p>
             <h3>Büyüyen salonlar</h3>
-            <p class="plan-copy">Personel takvimi, müşteri yönetimi ve raporlama isteyen salonlar için.</p>
-            <p class="price"><span data-price data-monthly="₺649" data-yearly="₺6.250">₺649</span><small data-period>/ay</small></p>
-            <a class="plan-action" href="mailto:randevusaatidestek@gmail.com?subject=Profesyonel%20Paket%20Talebi">Başvur</a>
+            <p class="price"><span data-price data-monthly="₺990" data-yearly="₺9.500">₺990</span><small data-period>/ay</small></p>
+            <p class="plan-copy">Rapor, müşteri takibi ve personel performansını düzenli izlemek isteyen salonlar için.</p>
+            <a class="plan-action" href="mailto:randevusaatidestek@gmail.com?subject=Profesyonel%20Paket%20Talebi">Hemen başla</a>
             <ul>
-              <li>1 işletme profili</li>
-              <li>8 personele kadar</li>
-              <li>Haftalık personel takvimi</li>
-              <li>Müşteri geçmişi ve engelleme</li>
-              <li>Haftalık ve aylık gelir raporu</li>
-              <li>Bildirim tercihleri</li>
+              <li>Gelişmiş paketteki tüm özellikler</li>
+              <li>Personel bazlı randevu sayısı</li>
+              <li>Personel bazlı kazanç tabloları</li>
+              <li>Haftalık ve aylık yoğunluk grafikleri</li>
             </ul>
           </article>
 
-          <article class="pricing-card">
-            <p class="plan-label">Kurumsal</p>
+          <article class="pricing-card plan-plus">
+            <div class="plan-icon" aria-hidden="true">4</div>
+            <p class="plan-label">Plus</p>
             <h3>Yoğun ekipler</h3>
-            <p class="plan-copy">Daha fazla personel ve özel kurulum desteği isteyen işletmeler için.</p>
-            <p class="price"><span data-price data-monthly="₺999" data-yearly="₺9.590">₺999</span><small data-period>/ay</small></p>
-            <a class="plan-action" href="mailto:randevusaatidestek@gmail.com?subject=Kurumsal%20Paket%20Talebi">Teklif al</a>
+            <p class="price"><span data-price data-monthly="₺1.290" data-yearly="₺12.380">₺1.290</span><small data-period>/ay</small></p>
+            <p class="plan-copy">Yoğun kullanım, gelişmiş performans raporları ve öncelikli destek isteyen işletmeler için.</p>
+            <a class="plan-action" href="mailto:randevusaatidestek@gmail.com?subject=Plus%20Paket%20Talebi">Hemen başla</a>
             <ul>
-              <li>1 işletme profili</li>
-              <li>20 personele kadar</li>
-              <li>Öncelikli kurulum desteği</li>
-              <li>Gelişmiş rapor takibi</li>
-              <li>Personel performans özeti</li>
+              <li>Profesyonel paketteki tüm özellikler</li>
+              <li>Yıllık yoğunluk grafikleri</li>
+              <li>Gelişmiş performans raporları</li>
               <li>Öncelikli destek</li>
             </ul>
           </article>
         </div>
+        <p class="pricing-note">Paket fiyatları aylık toplam kullanım ücretidir. Kapsam ve kurulum ihtiyaçları işletmeye göre netleştirilebilir.</p>
       </div>
     </section>
 

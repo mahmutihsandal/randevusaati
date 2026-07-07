@@ -31,8 +31,8 @@ Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren
 
 4. Kurulum ve Geçiş
    - "Siz de Randevu Saati'ne geçin" mesajıyla onboarding akışı anlatılacak.
-   - Kurulum videosu için video placeholder alanı eklenecek.
-   - Video gelince gerçek poster/video dosyasıyla değiştirilecek.
+   - Video gelene kadar boş placeholder gösterilmeyecek; polished onboarding/kurulum kartı kullanılacak.
+   - Video gelince bu alan gerçek poster/video dosyasıyla değiştirilecek.
 
 5. Paketler ve Karar Destek
    - Paketler sade kalacak.
@@ -43,7 +43,7 @@ Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren
 
 - Müşteri tarafı: Güncel ekran görüntüleri kullanılabilir ve kullanılmalı.
 - Admin tarafı: Güncel screenshot gelene kadar placeholder/mock UI kullanılacak.
-- Kurulum videosu: Şimdilik video alanı boş/placeholder kalacak.
+- Kurulum videosu: Video gelene kadar canlı sitede boş placeholder değil, polished onboarding kartı kullanılacak.
 - Codex yeni screenshot alarak inceleme yapmayacak. Kullanıcı açıkça izin vermedikçe sadece kullanıcının paylaştığı görseller incelenecek.
 - Kullanıcı tarafı için kullanılacak ek pazarlama/poster görsel kaynağı:
   - `/Users/mahmutdal/Desktop/app archive/RS reklam/randevum app icınları/market posters`
@@ -94,6 +94,56 @@ Kullanıcının paylaştığı iki yeni canlı site görseline göre hâlâ düz
 - Mini ekran görselleri çok küçük ve bölümün altında kopuk duruyor; kullanıcıya değer katmıyor.
 - Müşteri tarafı için market poster klasöründeki daha temiz mockup/poster görselleri seçilmeli; ham ekran görüntüsü kullanımına göre daha kontrollü sonuç verebilir.
 - Bir sonraki UI turunda öncelik: hero başlığını kısaltmak, akış kartlarını yatay/kompakt düzene almak, müşteri görsellerini poster varlıklarıyla değiştirmek, iç ekip dilini satış diline çevirmek.
+
+## 2026-07-08 Görsel Geri Bildirim Notu
+
+Kullanıcının paylaştığı üç yeni canlı site görseline göre site hâlâ yeterince profesyonel görünmüyor. Bir sonraki geliştirme turunda aşağıdaki değişiklikler yapılacak:
+
+### Hero
+
+- Hero başlığı hâlâ çok büyük ve fazla satıra bölünüyor. Başlık daha kısa, daha rafine ve daha az yer kaplayacak.
+- Sol metin alanı ile sağ ürün görseli arasında daha premium bir kompozisyon kurulacak; şu an iki taraf ayrı parçalar gibi duruyor.
+- Telefon görseli ve dashboard kartı aynı hikayeyi anlatacak şekilde yeniden yerleşecek. Telefon, dashboard’un üstüne rastgele bindirilmiş gibi durmayacak.
+- Dashboard içindeki liste/chart çakışması düzeltilecek. Şu an chart kartı randevu listesinin metinlerini kapatıyor ve kırık UI hissi veriyor.
+- Hero metrikleri ilk ekranda kopuk ve aşağıda kalıyor. Bunlar daha kompakt bir güven/kanıt şeridine dönüştürülecek veya hero içinde daha kontrollü kullanılacak.
+
+### Müşteri Akışı
+
+- Akış bölümü hâlâ yeterince güçlü satış dili taşımıyor. Daha net fayda odaklı metinlerle yeniden yazılacak.
+- Akış kartları ve poster önizlemeleri daha bütünleşik olacak; küçük görseller altta kopuk bir ek gibi durmayacak.
+- Bu bölümde amaç “ekran göstermek” değil, müşterinin randevuyu işletmeyi aramadan tamamladığını profesyonel şekilde anlatmak olacak.
+
+### Kurulum
+
+- Video placeholder çok boş ve tamamlanmamış ürün hissi veriyor. Gerçek video gelene kadar bu alan daha polished bir onboarding/kurulum kartına dönüştürülecek.
+- “Kurulum videosu alanı” gibi placeholder metni canlı sitede görünmemeli.
+- Kurulum adımları daha kısa, daha premium ve daha az kutu hissiyle sunulacak.
+- Başlık ve sağ kolon boyutu küçültülecek; bölüm daha dengeli hale getirilecek.
+
+### Paketler
+
+- Paket bölümü diğer bölümlere göre daha düzenli ama hâlâ ağır ve büyük görünüyor.
+- Başlık, toggle ve kartlar daha kompakt hale getirilecek.
+- Kart yükseklikleri ve boşluklar azaltılacak.
+- “En çok tercih edilen” rozeti ve fiyat alanı daha rafine konumlandırılacak.
+
+### Paket Tasarım Referansı
+
+- Kullanıcının verdiği `fiyat.png` yalnızca eksen/referans olarak alınacak; birebir kopyalanmayacak.
+- Paketler daha anlaşılır, renk kodlu ve karar vermeyi kolaylaştıran bir düzene geçecek.
+- Her paket ayrı accent rengi taşıyacak: başlangıç/kırmızı, gelişmiş/yeşil, profesyonel/mavi, plus/turuncu.
+- Fiyatlar daha büyük ve temiz okunacak; `/ay` etiketi daha net konumlanacak.
+- Paket başlıkları teknik değil işletme seviyesine göre anlaşılır olacak.
+- Özellik listeleri daha sade ve karşılaştırılabilir yazılacak.
+- “En popüler” rozeti renkli ama premium görünecek.
+- Fiyat bölümü sitenin genel renk dilini de etkileyecek: daha canlı ama kontrollü pastel accent sistemi.
+
+### Genel Tasarım Kalitesi
+
+- Büyük başlıklar yalnızca gerektiği yerde kullanılacak; alt bölümlerde daha sakin tipografi.
+- Kutu/kart yoğunluğu azaltılacak. Daha az ama daha güçlü kompozisyonlar tercih edilecek.
+- Canlı sitede iç geliştirme dili, placeholder dili veya “şimdilik” hissi veren hiçbir metin kalmayacak.
+- Tasarım yönü modern SaaS landing olarak korunacak: net değer önerisi, kontrollü görsel kompozisyon, premium dashboard hissi, güçlü CTA.
 
 ## Bu Aşamada Bilerek Ertelenenler
 

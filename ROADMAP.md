@@ -45,6 +45,19 @@ Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren
 - Admin tarafı: Güncel screenshot gelene kadar placeholder/mock UI kullanılacak.
 - Kurulum videosu: Şimdilik video alanı boş/placeholder kalacak.
 - Codex yeni screenshot alarak inceleme yapmayacak. Kullanıcı açıkça izin vermedikçe sadece kullanıcının paylaştığı görseller incelenecek.
+- Kullanıcı tarafı için kullanılacak ek pazarlama/poster görsel kaynağı:
+  - `/Users/mahmutdal/Desktop/app archive/RS reklam/randevum app icınları/market posters`
+- Bu klasördeki dosya adları akışı tarif ediyor; gerekli olanlar siteye seçilerek taşınacak/kopyalanacak. İlk adaylar:
+  - `apple-iphone-15-pro-white-titanium-mockup/1home-portrait.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/2staff-portrait.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/services.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/4calendar-portrait.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/5approved-portrait.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/6past-portrait.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/7profile-portrait.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/shopsearchh-portrait.png`
+  - `apple-iphone-15-pro-white-titanium-mockup/splash-portrait copy.png`
+- Seçilen ve optimize edilen kopyalar repo içinde `assets/marketing/` altında tutulacak.
 - Yeni ekran görüntüleri geldiğinde hedef klasör:
   - `assets/screens/user-current/`
   - `assets/screens/admin-current/`
@@ -69,6 +82,18 @@ Kullanıcının paylaştığı canlı site görsellerine göre mevcut tasarım m
 - Tipografi daha kontrollü olacak: büyük başlık sadece hero'da, alt bölümlerde daha rafine ölçüler.
 - İlk ekranın amacı: ne işe yarıyor, kime yarıyor, nasıl demo alınır sorularını hızlı cevaplamak.
 - Bölüm sırası: hero, güven/değer şeridi, kısa randevu akışı, işletme paneli, kurulum/geçiş, paketler, SSS.
+
+## 2026-07-07 İkinci Görsel Geri Bildirim Notu
+
+Kullanıcının paylaştığı iki yeni canlı site görseline göre hâlâ düzeltilmesi gereken noktalar:
+
+- Hero başlığı hâlâ çok büyük ve çok satıra bölünüyor; ilk ekranın dengesi metin lehine fazla ağır.
+- Hero görsel kompozisyonunda dashboard ve telefon alanı daha rafine olmalı; telefon chart/dashboard üstünü kapatan rastgele overlay gibi durmamalı.
+- Müşteri akışı bölümünde başlık yine fazla büyük ve ürün değerinden çok iç tasarım kararını anlatıyor. Kullanıcıya "screenshot galeri değil" gibi iç ekip dili gösterilmemeli.
+- Akış kartları çok dar; metinler kelime kelime alt satıra düşüyor ve profesyonel görünmüyor.
+- Mini ekran görselleri çok küçük ve bölümün altında kopuk duruyor; kullanıcıya değer katmıyor.
+- Müşteri tarafı için market poster klasöründeki daha temiz mockup/poster görselleri seçilmeli; ham ekran görüntüsü kullanımına göre daha kontrollü sonuç verebilir.
+- Bir sonraki UI turunda öncelik: hero başlığını kısaltmak, akış kartlarını yatay/kompakt düzene almak, müşteri görsellerini poster varlıklarıyla değiştirmek, iç ekip dilini satış diline çevirmek.
 
 ## Bu Aşamada Bilerek Ertelenenler
 

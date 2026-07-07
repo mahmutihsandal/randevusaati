@@ -23,6 +23,7 @@ http://localhost:4173
 - `script.js`: mobile navigation, pricing toggle, and screenshot modal
 - `ROADMAP.md`: UI/UX roadmap, asset policy, and deferred verification notes
 - `assets/screens`: optimized app screenshots grouped by flow
+- `assets/marketing`: selected marketing poster/mockup images used by the landing page
 - `assets/brand`: logo and social preview image
 - `assets/video`: future setup or product demo videos
 

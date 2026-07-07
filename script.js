@@ -9,6 +9,7 @@ const screenModalImage = document.querySelector("#screen-modal-image");
 const screenModalTitle = document.querySelector("#screen-modal-title");
 const screenModalCopy = document.querySelector("#screen-modal-copy");
 const modalClose = document.querySelector(".modal-close");
+const whatsappLink = document.querySelector("[data-whatsapp-link]");
 
 function setBilling(period) {
   billingButtons.forEach((button) => {
@@ -85,5 +86,32 @@ modalClose?.addEventListener("click", closeScreenModal);
 screenModal?.addEventListener("click", (event) => {
   if (event.target === screenModal) {
     closeScreenModal();
+  }
+});
+
+function setupWhatsAppLink() {
+  if (!whatsappLink) return;
+
+  const phone = (whatsappLink.dataset.phone || "").replace(/\D/g, "");
+  const message = whatsappLink.dataset.message || "Merhaba, Randevu Saati için bilgi almak istiyorum.";
+
+  if (!phone) {
+    whatsappLink.setAttribute("aria-disabled", "true");
+    whatsappLink.setAttribute("title", "WhatsApp numarası eklenecek.");
+    return;
+  }
+
+  whatsappLink.href = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+  whatsappLink.target = "_blank";
+  whatsappLink.rel = "noopener";
+  whatsappLink.removeAttribute("aria-disabled");
+  whatsappLink.setAttribute("title", "WhatsApp ile demo talebi gönder");
+}
+
+setupWhatsAppLink();
+
+whatsappLink?.addEventListener("click", (event) => {
+  if (whatsappLink.getAttribute("aria-disabled") === "true") {
+    event.preventDefault();
   }
 });

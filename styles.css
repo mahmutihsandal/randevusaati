@@ -71,6 +71,7 @@ html {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   color: var(--ink);
   background:
     linear-gradient(180deg, #fbfdfb 0%, #ffffff 38%, #f6fbf8 100%);
@@ -391,12 +392,36 @@ button {
 }
 
 .hero {
+  position: relative;
+  isolation: isolate;
   min-height: 86svh;
   display: grid;
   grid-template-columns: minmax(390px, 0.84fr) minmax(560px, 1.08fr);
   gap: clamp(28px, 4.2vw, 58px);
   align-items: center;
   padding: calc(var(--header-height) + 48px) 0 68px;
+}
+
+.hero::before {
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -2;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 38%, rgba(255, 255, 255, 0.58) 70%, rgba(255, 255, 255, 0.3) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.22) 54%, #fbfdfb 100%),
+    url("./assets/marketing/salon-hero-background.png") center / cover no-repeat;
+}
+
+.hero::after {
+  position: absolute;
+  inset: 0 calc(50% - 50vw);
+  z-index: -1;
+  content: "";
+  background:
+    radial-gradient(circle at 20% 42%, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.46) 34%, rgba(255, 255, 255, 0) 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 66%, #fbfdfb 100%);
+  pointer-events: none;
 }
 
 .eyebrow {

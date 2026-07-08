@@ -1792,10 +1792,10 @@ button {
 .pricing-card {
   position: relative;
   --plan-color: var(--mint-dark);
-  --plan-soft: rgba(143, 207, 193, 0.1);
-  --plan-border: rgba(45, 123, 112, 0.24);
-  --plan-shadow: rgba(7, 20, 33, 0.08);
-  --plan-rule: rgba(45, 123, 112, 0.36);
+  --plan-soft: rgba(143, 207, 193, 0.18);
+  --plan-border: rgba(45, 123, 112, 0.42);
+  --plan-shadow: rgba(7, 20, 33, 0.1);
+  --plan-rule: rgba(45, 123, 112, 0.54);
   min-height: 510px;
   display: flex;
   flex-direction: column;
@@ -1803,9 +1803,9 @@ button {
   border: 1px solid var(--plan-border);
   border-radius: var(--radius);
   background:
-    linear-gradient(180deg, var(--plan-soft), rgba(255, 255, 255, 0.72) 36%),
-    rgba(255, 255, 255, 0.72);
-  box-shadow: 0 16px 42px rgba(7, 20, 33, 0.09);
+    linear-gradient(180deg, var(--plan-soft), rgba(255, 255, 255, 0.8) 44%),
+    rgba(255, 255, 255, 0.82);
+  box-shadow: 0 16px 42px rgba(7, 20, 33, 0.09), 0 12px 28px var(--plan-shadow);
   backdrop-filter: blur(12px);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
@@ -1824,34 +1824,34 @@ button {
 
 .plan-basic {
   --plan-color: #ff3155;
-  --plan-soft: rgba(255, 49, 85, 0.09);
-  --plan-border: rgba(255, 49, 85, 0.22);
-  --plan-shadow: rgba(255, 49, 85, 0.1);
-  --plan-rule: rgba(255, 49, 85, 0.34);
+  --plan-soft: rgba(255, 49, 85, 0.18);
+  --plan-border: rgba(255, 49, 85, 0.4);
+  --plan-shadow: rgba(255, 49, 85, 0.14);
+  --plan-rule: rgba(255, 49, 85, 0.55);
 }
 
 .plan-growth {
   --plan-color: #14a978;
-  --plan-soft: rgba(20, 169, 120, 0.09);
-  --plan-border: rgba(20, 169, 120, 0.22);
-  --plan-shadow: rgba(20, 169, 120, 0.1);
-  --plan-rule: rgba(20, 169, 120, 0.36);
+  --plan-soft: rgba(20, 169, 120, 0.18);
+  --plan-border: rgba(20, 169, 120, 0.4);
+  --plan-shadow: rgba(20, 169, 120, 0.14);
+  --plan-rule: rgba(20, 169, 120, 0.56);
 }
 
 .plan-pro {
   --plan-color: #1477f2;
-  --plan-soft: rgba(20, 119, 242, 0.1);
-  --plan-border: rgba(20, 119, 242, 0.54);
-  --plan-shadow: rgba(20, 119, 242, 0.14);
-  --plan-rule: rgba(20, 119, 242, 0.58);
+  --plan-soft: rgba(20, 119, 242, 0.18);
+  --plan-border: rgba(20, 119, 242, 0.62);
+  --plan-shadow: rgba(20, 119, 242, 0.18);
+  --plan-rule: rgba(20, 119, 242, 0.68);
 }
 
 .plan-plus {
   --plan-color: #ff8612;
-  --plan-soft: rgba(255, 134, 18, 0.1);
-  --plan-border: rgba(255, 134, 18, 0.28);
-  --plan-shadow: rgba(255, 134, 18, 0.12);
-  --plan-rule: rgba(255, 134, 18, 0.42);
+  --plan-soft: rgba(255, 134, 18, 0.19);
+  --plan-border: rgba(255, 134, 18, 0.44);
+  --plan-shadow: rgba(255, 134, 18, 0.16);
+  --plan-rule: rgba(255, 134, 18, 0.6);
 }
 
 .plan-icon {
@@ -1863,6 +1863,7 @@ button {
   border-radius: 50%;
   color: var(--plan-color);
   background: var(--plan-soft);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.62), 0 10px 24px var(--plan-shadow);
 }
 
 .plan-icon img {

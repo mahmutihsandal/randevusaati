@@ -405,7 +405,7 @@ button {
 .hero::before {
   position: absolute;
   inset: 0 calc(50% - 50vw);
-  z-index: -2;
+  z-index: 0;
   content: "";
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.9) 38%, rgba(255, 255, 255, 0.58) 70%, rgba(255, 255, 255, 0.3) 100%),
@@ -416,12 +416,17 @@ button {
 .hero::after {
   position: absolute;
   inset: 0 calc(50% - 50vw);
-  z-index: -1;
+  z-index: 0;
   content: "";
   background:
     radial-gradient(circle at 20% 42%, rgba(255, 255, 255, 0.78) 0%, rgba(255, 255, 255, 0.46) 34%, rgba(255, 255, 255, 0) 62%),
     linear-gradient(180deg, rgba(255, 255, 255, 0) 66%, #fbfdfb 100%);
   pointer-events: none;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {

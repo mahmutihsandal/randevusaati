@@ -15,7 +15,7 @@
   <link rel="icon" href="./assets/brand/app-logo.png">
   <link rel="preload" as="image" href="./assets/marketing/salon-hero-background.png">
   <link rel="preload" as="image" href="./assets/marketing/home-poster.png">
-  <link rel="stylesheet" href="./styles.css?v=20260708-6">
+  <link rel="stylesheet" href="./styles.css?v=20260708-7">
 </head>
 <body>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -27,10 +27,9 @@
     </a>
 
     <nav id="site-nav" class="nav-links" aria-label="Sayfa bölümleri">
-      <a href="#neden">Neden</a>
-      <a href="#akis">Akış</a>
+      <a href="#neden">Neden?</a>
+      <a href="#akis">Nasıl Çalışır?</a>
       <a href="#panel">Panel</a>
-      <a href="#kurulum">Kurulum</a>
       <a href="#paketler">Paketler</a>
       <a href="#sss">SSS</a>
     </nav>
@@ -41,7 +40,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="header-action" href="mailto:randevusaatidestek@gmail.com?subject=Randevu%20Saati%20Demo%20Talebi">Demo talep et</a>
+      <a class="header-action" href="mailto:randevusaatidestek@gmail.com?subject=Randevu%20Saati%20Demo%20Talebi">Ücretsiz Demo Al <span aria-hidden="true">→</span></a>
     </div>
   </header>
 
@@ -49,8 +48,8 @@
     <section id="top" class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Salonlar için online randevu sistemi</p>
-        <h1 id="hero-title">Salonunuzun online randevu sistemi.</h1>
-        <p class="hero-lead">Müşteriler randevuyu kendileri alır, siz işletmeyi tek panelden yönetirsiniz. Günlük akış, haftalık takvim, kapalı saatler ve kazanç takibi hep aynı yerde.</p>
+        <h1 id="hero-title">Kuaför salonunuzun randevu sistemi artık cebinizde.</h1>
+        <p class="hero-lead">Müşterileriniz hizmeti, personeli ve uygun saati kendisi seçer. Siz randevuları, yoğunluğu ve kazancı tek panelden kolayca yönetirsiniz.</p>
 
         <div class="hero-actions" aria-label="Öne çıkan işlemler">
           <a class="primary-action" href="mailto:randevusaatidestek@gmail.com?subject=Randevu%20Saati%20Demo%20Talebi">Ücretsiz Demo Al <span aria-hidden="true">→</span></a>
@@ -88,118 +87,107 @@
           <img src="./assets/marketing/home-poster.png" alt="Randevu Saati müşteri uygulaması ana ekran poster görünümü" width="558" height="1100" decoding="async" fetchpriority="high">
         </div>
 
-        <div class="dashboard-preview">
-          <div class="window-bar" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
+        <article class="hero-float-card stat-card stat-today" aria-label="Bugünkü randevu sayısı">
+          <img src="./assets/marketing/hero-icons/icon-calendar.png" alt="" width="48" height="48" loading="lazy" decoding="async">
+          <div>
+            <span>Bugün</span>
+            <strong>12</strong>
+            <small>randevu</small>
           </div>
+          <i aria-hidden="true">→</i>
+        </article>
 
-          <div class="preview-heading">
-            <div>
-              <span>İşletme paneli</span>
-              <strong>Bugünün akışı</strong>
-            </div>
-            <small>Canlı</small>
+        <article class="hero-float-card stat-card stat-revenue" aria-label="Tahmini gelir">
+          <img src="./assets/marketing/hero-icons/icon-revenue.png" alt="" width="56" height="56" loading="lazy" decoding="async">
+          <div>
+            <span>Tahmini gelir</span>
+            <strong>₺8.400</strong>
           </div>
+          <i aria-hidden="true">→</i>
+        </article>
 
-          <div class="preview-top">
-            <div>
-              <span>Bugün</span>
-              <strong>12 randevu</strong>
-            </div>
-            <div>
-              <span>Tahmini gelir</span>
-              <strong>₺8.400</strong>
-            </div>
+        <article class="hero-float-card appointment-card" aria-label="Yeni randevu bildirimi">
+          <img src="./assets/marketing/hero-icons/icon-appointment.png" alt="" width="38" height="38" loading="lazy" decoding="async">
+          <div>
+            <span>Yeni randevu</span>
+            <strong>12:00 <em>Saç Kesimi</em></strong>
+            <small>Müşteri: Zeynep A.</small>
           </div>
+          <i aria-hidden="true"></i>
+        </article>
 
-          <div class="preview-grid">
-            <div class="preview-list">
-              <div><time>09:00</time><strong>Saç sakal kesimi</strong><span>Ahmet Yılmaz</span></div>
-              <div><time>12:00</time><strong>Saç kesimi</strong><span>Emre Arslan</span></div>
-              <div><time>15:30</time><strong>Fön şekillendirme</strong><span>Ayşe Yılmaz</span></div>
-            </div>
-
-            <div class="preview-week" aria-label="Haftalık doluluk">
-              <span>Pzt</span><span>Sal</span><span>Çar</span><span>Per</span><span>Cum</span>
-              <i style="--h: 54%"></i><i style="--h: 72%"></i><i style="--h: 48%"></i><i style="--h: 78%"></i><i style="--h: 88%"></i>
-            </div>
+        <article class="hero-float-card timeline-card" aria-label="Canlı takvim">
+          <div class="timeline-card-head">
+            <strong>Canlı Takvim</strong>
+            <span>Takvimi Aç</span>
           </div>
-        </div>
+          <div class="timeline-grid">
+            <time>10:00</time>
+            <div><span class="bar bar-green">Ayşe Yılmaz</span></div>
+            <time>11:00</time>
+            <div><span class="bar bar-purple">Emre Arslan</span></div>
+            <time>12:00</time>
+            <div><span class="bar bar-red">Selin Kaya</span></div>
+            <time>13:00</time>
+            <div><span class="bar bar-blue">Mert Demir</span></div>
+            <b aria-hidden="true"></b>
+          </div>
+        </article>
 
-        <div class="scene-note" aria-label="Yeni randevu bildirimi">
-          <span>Yeni randevu</span>
-          <strong>12:00 Saç Kesimi</strong>
-        </div>
+        <div class="hero-spark" aria-hidden="true">✦</div>
       </div>
     </section>
 
-    <section id="neden" class="section section-white" aria-labelledby="why-title">
-      <div class="section-inner compact-head reveal">
-        <p class="eyebrow">Neden Randevu Saati?</p>
-        <h2 id="why-title">Randevu karmaşasını tek bir sisteme dönüştürür.</h2>
-      </div>
+    <section id="neden" class="section section-overview" aria-labelledby="why-title">
+      <div class="section-inner overview-grid reveal">
+        <div class="overview-block">
+          <div class="overview-heading">
+            <h2 id="why-title">Neden Randevu Saati?</h2>
+          </div>
 
-      <div class="section-inner value-row reveal" aria-label="Ürün değerleri">
-        <article>
-          <span>01</span>
-          <h3>Müşteri beklemeden randevu alır</h3>
-          <p>Salon vitrini, hizmetler, personel ve uygun saatler mobilde net görünür.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Salon günü daha okunur olur</h3>
-          <p>Bugünkü ve yakın tarihli randevular aynı işletme düzeninde toplanır.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Kazanç ve performans görünür olur</h3>
-          <p>Haftalık/aylık gelir, randevu sayısı ve personel bazlı performans izlenir.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="akis" class="section section-flow" aria-labelledby="flow-title">
-      <div class="section-inner flow-layout reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Müşteri randevu akışı</p>
-          <h2 id="flow-title">Müşteriniz aramadan randevu alır.</h2>
-          <p>Salon, hizmet, personel ve uygun saat — müşteri hepsini tek akışta seçer ve randevusunu tamamlar.</p>
+          <div class="overview-cards" aria-label="Ürün değerleri">
+            <article>
+              <img src="./assets/marketing/hero-icons/icon-appointment.png" alt="" width="54" height="54" loading="lazy" decoding="async">
+              <h3>Müşteri Deneyimi</h3>
+              <p>Müşteriniz hizmeti, uzmanını ve uygun saati kolayca seçer.</p>
+            </article>
+            <article>
+              <img src="./assets/marketing/hero-icons/icon-calendar.png" alt="" width="54" height="54" loading="lazy" decoding="async">
+              <h3>Takvim Kontrolü</h3>
+              <p>Yoğunluk, iptal ve boşlukları anlık görün. Çakışmaları otomatik önleyin.</p>
+            </article>
+            <article>
+              <img src="./assets/marketing/hero-icons/icon-revenue.png" alt="" width="54" height="54" loading="lazy" decoding="async">
+              <h3>Gelir Takibi</h3>
+              <p>Günlük, haftalık ve aylık kazancınızı takip edin.</p>
+            </article>
+          </div>
         </div>
 
-        <div class="flow-board">
-          <div class="flow-steps" aria-label="Müşteri randevu adımları">
+        <div id="akis" class="overview-block workflow-block" aria-labelledby="flow-title">
+          <div class="overview-heading">
+            <h2 id="flow-title">Nasıl Çalışır?</h2>
+          </div>
+
+          <div class="workflow-cards" aria-label="Kurulum adımları">
             <article>
               <span>1</span>
-              <h3>Salon vitrinini açar</h3>
-              <p>Konum, güven bilgisi, personel ve hizmetler ilk ekranda anlaşılır.</p>
+              <img src="./assets/marketing/hero-icons/icon-staff.png" alt="" width="54" height="54" loading="lazy" decoding="async">
+              <h3>İşletmeni Oluştur</h3>
+              <p>Bilgilerini gir, çalışma saatlerini belirle ve sistemini dakikalar içinde hazırla.</p>
             </article>
             <article>
               <span>2</span>
-              <h3>Hizmet ve personel seçer</h3>
-              <p>Süre, fiyat ve uygun personel bilgisi karar sürecini hızlandırır.</p>
+              <img src="./assets/marketing/hero-icons/icon-appointment.png" alt="" width="54" height="54" loading="lazy" decoding="async">
+              <h3>Hizmetlerini Ekle</h3>
+              <p>Hizmetlerini, fiyatlarını ve uzmanlarını ekle. Müşterilerin seçime hazır olsun.</p>
             </article>
             <article>
               <span>3</span>
-              <h3>Saati onaylar</h3>
-              <p>Uygun saat seçilir, randevu hem müşteride hem panelde netleşir.</p>
+              <img src="./assets/marketing/hero-icons/icon-calendar.png" alt="" width="54" height="54" loading="lazy" decoding="async">
+              <h3>Randevuları Yönet</h3>
+              <p>Randevuları tek panelden yönet, bildirimlerle her şeyi kontrol altında tut.</p>
             </article>
-          </div>
-
-          <div class="mini-screens" aria-label="Müşteri uygulaması poster görselleri">
-            <button type="button" data-modal-image="./assets/marketing/home-poster.png" data-modal-title="Salon vitrini" data-modal-copy="Müşteri salonu, personeli, hizmetleri ve randevu çağrısını tek ekranda görür.">
-              <img src="./assets/marketing/home-poster.png" alt="Salon vitrini poster görseli" width="558" height="1100" loading="lazy" decoding="async">
-              <span>Salon vitrini</span>
-            </button>
-            <button type="button" data-modal-image="./assets/marketing/services-poster.png" data-modal-title="Hizmet seçimi" data-modal-copy="Hizmet, süre ve fiyat bilgisi randevu kararını sadeleştirir.">
-              <img src="./assets/marketing/services-poster.png" alt="Hizmet seçimi poster görseli" width="558" height="1100" loading="lazy" decoding="async">
-              <span>Hizmet seçimi</span>
-            </button>
-            <button type="button" data-modal-image="./assets/marketing/calendar-poster.png" data-modal-title="Tarih ve saat" data-modal-copy="Müşteri uygun tarihi ve saati kendi seçer, işletme takvimi otomatik güncellenir.">
-              <img src="./assets/marketing/calendar-poster.png" alt="Tarih ve saat poster görseli" width="558" height="1100" loading="lazy" decoding="async">
-              <span>Tarih ve saat</span>
-            </button>
           </div>
         </div>
       </div>

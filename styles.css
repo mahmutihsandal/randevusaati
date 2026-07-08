@@ -1713,17 +1713,17 @@ button {
   display: grid;
   justify-items: center;
   gap: 12px;
-  margin-bottom: 42px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .pricing-head .section-heading {
-  max-width: 920px;
+  max-width: 780px;
   margin-bottom: 0;
 }
 
 .section-pricing .section-inner {
-  width: min(1360px, calc(100% - 48px));
+  width: min(1220px, calc(100% - 48px));
 }
 
 .pricing-head .eyebrow {
@@ -1731,16 +1731,16 @@ button {
 }
 
 .pricing-head h2 {
-  font-size: clamp(3rem, 6vw, 5.3rem);
-  line-height: 0.98;
+  font-size: clamp(2.2rem, 3.4vw, 3.08rem);
+  line-height: 1.06;
 }
 
 .pricing-head p:not(.eyebrow) {
-  max-width: 780px;
+  max-width: 700px;
   margin-right: auto;
   margin-left: auto;
   color: var(--ink);
-  font-size: clamp(1rem, 1.45vw, 1.2rem);
+  font-size: 1.02rem;
   font-weight: 850;
 }
 
@@ -1784,9 +1784,9 @@ button {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+  gap: 14px;
   align-items: stretch;
-  padding-top: 20px;
+  padding-top: 14px;
 }
 
 .pricing-card {
@@ -1796,23 +1796,23 @@ button {
   --plan-border: rgba(45, 123, 112, 0.24);
   --plan-shadow: rgba(7, 20, 33, 0.08);
   --plan-rule: rgba(45, 123, 112, 0.36);
-  min-height: 650px;
+  min-height: 510px;
   display: flex;
   flex-direction: column;
-  padding: 30px 24px 22px;
+  padding: 20px;
   border: 1px solid var(--plan-border);
   border-radius: var(--radius);
   background:
     linear-gradient(180deg, var(--plan-soft), rgba(255, 255, 255, 0.72) 36%),
     rgba(255, 255, 255, 0.72);
-  box-shadow: 0 20px 54px rgba(7, 20, 33, 0.1);
-  backdrop-filter: blur(16px);
+  box-shadow: 0 16px 42px rgba(7, 20, 33, 0.09);
+  backdrop-filter: blur(12px);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .pricing-card.is-featured {
   border-width: 2px;
-  box-shadow: 0 26px 68px rgba(20, 119, 242, 0.14);
+  box-shadow: 0 22px 54px rgba(20, 119, 242, 0.13);
 }
 
 @media (hover: hover) {
@@ -1855,34 +1855,34 @@ button {
 }
 
 .plan-icon {
-  width: 82px;
-  height: 82px;
+  width: 58px;
+  height: 58px;
   display: grid;
   place-items: center;
-  margin: 0 auto 18px;
+  margin: 0 auto 12px;
   border-radius: 50%;
   color: var(--plan-color);
   background: var(--plan-soft);
 }
 
 .plan-icon img {
-  width: 54px;
-  height: 54px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
 }
 
 .plan-badge {
   position: absolute;
-  top: -19px;
+  top: -17px;
   right: 50%;
   transform: translateX(50%);
   margin: 0;
-  padding: 7px 18px;
+  padding: 6px 14px;
   border-radius: 999px;
   color: #fff;
   background: var(--plan-color);
   box-shadow: 0 12px 28px var(--plan-shadow);
-  font-size: 0.86rem;
+  font-size: 0.78rem;
   font-weight: 950;
   text-transform: uppercase;
   white-space: nowrap;
@@ -1891,12 +1891,12 @@ button {
 .plan-label {
   width: max-content;
   max-width: 100%;
-  margin: 12px auto 0;
-  padding: 8px 14px;
+  margin: 10px auto 0;
+  padding: 6px 12px;
   border-radius: 999px;
   color: var(--plan-color);
   background: var(--plan-soft);
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   font-weight: 950;
   text-align: center;
 }
@@ -1904,26 +1904,26 @@ button {
 .pricing-card h3 {
   margin: 0;
   color: var(--ink-strong);
-  font-size: clamp(1.42rem, 2vw, 1.8rem);
+  font-size: var(--text-xl);
   line-height: 1.1;
   text-align: center;
 }
 
 .plan-copy {
-  margin: 26px 0 0;
-  padding-top: 26px;
-  border-top: 2px solid var(--plan-rule);
+  margin: 18px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--plan-rule);
   color: var(--ink);
-  font-size: 0.94rem;
+  font-size: 0.88rem;
   font-weight: 780;
-  line-height: 1.72;
+  line-height: 1.58;
   text-align: center;
 }
 
 .price {
-  margin: 18px 0 0;
+  margin: 14px 0 0;
   color: var(--ink-strong);
-  font-size: clamp(2.4rem, 3.4vw, 3.3rem);
+  font-size: clamp(1.95rem, 2.7vw, 2.52rem);
   line-height: 1;
   font-weight: 950;
   letter-spacing: 0;
@@ -1932,23 +1932,23 @@ button {
 }
 
 .price small {
-  margin-left: 6px;
+  margin-left: 5px;
   color: var(--ink);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 850;
 }
 
 .plan-action {
-  min-height: 50px;
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: auto 0 0;
-  padding: 12px 16px;
+  padding: 10px 14px;
   color: var(--plan-color);
   border: 1px solid var(--plan-color);
   background: #fff;
-  font-size: 1.05rem;
+  font-size: 0.94rem;
   box-shadow: none;
   transition: color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
@@ -1968,17 +1968,17 @@ button {
 
 .pricing-card ul {
   display: grid;
-  gap: 13px;
-  margin: 24px 0 26px;
+  gap: 10px;
+  margin: 18px 0 22px;
   padding: 0;
   list-style: none;
 }
 
 .pricing-card li {
   position: relative;
-  padding-left: 29px;
+  padding-left: 25px;
   color: var(--ink);
-  font-size: 0.93rem;
+  font-size: 0.86rem;
   font-weight: 820;
   line-height: 1.45;
 }
@@ -1988,14 +1988,14 @@ button {
   position: absolute;
   left: 0;
   top: 0.08em;
-  width: 19px;
-  height: 19px;
+  width: 16px;
+  height: 16px;
   display: grid;
   place-items: center;
   border-radius: 50%;
   color: #fff;
   background: var(--plan-color);
-  font-size: 0.72rem;
+  font-size: 0.65rem;
   font-weight: 950;
 }
 
@@ -2019,9 +2019,9 @@ button {
 
 .pricing-note {
   max-width: 760px;
-  margin: 18px auto 0;
+  margin: 16px auto 0;
   color: #415573;
-  font-size: 0.96rem;
+  font-size: 0.9rem;
   font-weight: 900;
   text-align: center;
 }

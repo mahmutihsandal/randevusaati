@@ -11,6 +11,7 @@ const modalClose = document.querySelector(".modal-close");
 const whatsappLink = document.querySelector("[data-whatsapp-link]");
 const pricingCtaOverlay = document.querySelector(".pricing-cta-overlay");
 const heroSection = document.querySelector("#top");
+const finalCtaSection = document.querySelector(".section-final");
 
 function setBilling(period) {
   billingButtons.forEach((button) => {
@@ -138,8 +139,11 @@ function setupFloatingPricingCta() {
     const triggerY = heroSection
       ? heroSection.offsetTop + heroSection.offsetHeight - 120
       : window.innerHeight * 0.85;
+    const hideY = finalCtaSection
+      ? finalCtaSection.offsetTop - window.innerHeight + 120
+      : Number.POSITIVE_INFINITY;
 
-    setVisible(window.scrollY >= triggerY);
+    setVisible(window.scrollY >= triggerY && window.scrollY < hideY);
   }
 
   function requestVisibilityUpdate() {

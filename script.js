@@ -116,3 +116,126 @@ whatsappLink?.addEventListener("click", (event) => {
     event.preventDefault();
   }
 });
+
+/* ───────────────────────────────────────────────
+   Scroll-triggered section reveals
+   ─────────────────────────────────────────────── */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if (revealElements.length > 0 && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+  );
+
+  revealElements.forEach((el) => revealObserver.observe(el));
+}
+
+/* ───────────────────────────────────────────────
+   Header scroll effect
+   ─────────────────────────────────────────────── */
+
+const siteHeader = document.querySelector(".site-header");
+
+if (siteHeader) {
+  const scrollThreshold = 10;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      siteHeader.classList.toggle("is-scrolled", window.scrollY > scrollThreshold);
+    },
+    { passive: true }
+  );
+}
+
+/* ───────────────────────────────────────────────
+   Active nav link on scroll
+   ─────────────────────────────────────────────── */
+
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+const sectionIds = Array.from(navAnchors).map((a) => a.getAttribute("href").slice(1));
+const trackedSections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
+
+if (trackedSections.length > 0 && "IntersectionObserver" in window) {
+  const navObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.id;
+        const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+        if (link) {
+          link.classList.toggle("is-active", entry.isIntersecting);
+        }
+      });
+    },
+    { threshold: 0.15, rootMargin: "-20% 0px -60% 0px" }
+  );
+
+  trackedSections.forEach((section) => navObserver.observe(section));
+}
+
+/* ───────────────────────────────────────────────
+   FAQ smooth accordion
+   ─────────────────────────────────────────────── */
+
+const faqDetails = document.querySelectorAll(".faq-list details");
+
+faqDetails.forEach((detail) => {
+  const summary = detail.querySelector("summary");
+  const content = detail.querySelector("p");
+
+  if (!summary || !content) return;
+
+  summary.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (detail.open) {
+      content.style.maxHeight = content.scrollHeight + "px";
+      content.style.opacity = "1";
+
+      requestAnimationFrame(() => {
+        content.style.maxHeight = "0";
+        content.style.paddingBottom = "0";
+        content.style.opacity = "0";
+      });
+
+      const onEnd = () => {
+        detail.open = false;
+        content.style.maxHeight = "";
+        content.style.paddingBottom = "";
+        content.style.opacity = "";
+      };
+
+      content.addEventListener("transitionend", onEnd, { once: true });
+    } else {
+      detail.open = true;
+
+      const height = content.scrollHeight;
+      content.style.maxHeight = "0";
+      content.style.paddingBottom = "0";
+      content.style.opacity = "0";
+      content.style.overflow = "hidden";
+
+      requestAnimationFrame(() => {
+        content.style.maxHeight = height + "px";
+        content.style.paddingBottom = "";
+        content.style.opacity = "1";
+      });
+
+      const onEnd = () => {
+        content.style.maxHeight = "";
+        content.style.overflow = "";
+      };
+
+      content.addEventListener("transitionend", onEnd, { once: true });
+    }
+  });
+});

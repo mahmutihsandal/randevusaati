@@ -9,6 +9,8 @@ const screenModalTitle = document.querySelector("#screen-modal-title");
 const screenModalCopy = document.querySelector("#screen-modal-copy");
 const modalClose = document.querySelector(".modal-close");
 const whatsappLink = document.querySelector("[data-whatsapp-link]");
+const pricingCtaOverlay = document.querySelector(".pricing-cta-overlay");
+const heroSection = document.querySelector("#top");
 
 function setBilling(period) {
   billingButtons.forEach((button) => {
@@ -116,6 +118,46 @@ whatsappLink?.addEventListener("click", (event) => {
     event.preventDefault();
   }
 });
+
+function setupFloatingPricingCta() {
+  if (!pricingCtaOverlay) return;
+
+  let isVisible = false;
+  let isTicking = false;
+
+  function setVisible(nextVisible) {
+    if (nextVisible === isVisible) return;
+
+    isVisible = nextVisible;
+    pricingCtaOverlay.classList.toggle("is-visible", isVisible);
+    pricingCtaOverlay.setAttribute("aria-hidden", String(!isVisible));
+    pricingCtaOverlay.toggleAttribute("inert", !isVisible);
+  }
+
+  function updateVisibility() {
+    const triggerY = heroSection
+      ? heroSection.offsetTop + heroSection.offsetHeight - 120
+      : window.innerHeight * 0.85;
+
+    setVisible(window.scrollY >= triggerY);
+  }
+
+  function requestVisibilityUpdate() {
+    if (isTicking) return;
+
+    isTicking = true;
+    window.requestAnimationFrame(() => {
+      updateVisibility();
+      isTicking = false;
+    });
+  }
+
+  updateVisibility();
+  window.addEventListener("scroll", requestVisibilityUpdate, { passive: true });
+  window.addEventListener("resize", requestVisibilityUpdate);
+}
+
+setupFloatingPricingCta();
 
 /* ───────────────────────────────────────────────
    Scroll-triggered section reveals

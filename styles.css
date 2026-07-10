@@ -400,19 +400,19 @@ button {
 
 .hero,
 .section-inner {
-  width: min(1220px, calc(100% - 48px));
+  width: min(1272px, calc(100% - 48px));
   margin: 0 auto;
 }
 
 .hero {
   position: relative;
   isolation: isolate;
-  min-height: 84svh;
+  min-height: 646px;
   display: grid;
-  grid-template-columns: minmax(390px, 0.76fr) minmax(610px, 1.12fr);
-  gap: clamp(32px, 4.6vw, 68px);
+  grid-template-columns: minmax(440px, 480px) minmax(0, 1fr);
+  gap: 40px;
   align-items: center;
-  padding: calc(var(--header-height) + 48px) 0 46px;
+  padding: calc(var(--header-height) + 6px) 0 16px;
 }
 
 .hero::before {
@@ -421,9 +421,10 @@ button {
   z-index: 0;
   content: "";
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.68) 38%, rgba(255, 255, 255, 0.48) 70%, rgba(255, 255, 255, 0.24) 100%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0.1) 54%, #fbfdfb 100%),
-    url("./assets/marketing/salon-hero-background.png") center / cover no-repeat;
+    radial-gradient(ellipse 34% 62% at 61% 58%, rgba(143, 207, 193, 0.2) 0%, rgba(143, 207, 193, 0.1) 47%, rgba(143, 207, 193, 0) 72%),
+    radial-gradient(circle at 75% 24%, rgba(255, 164, 143, 0) 0 132px, rgba(255, 164, 143, 0.12) 133px 137px, rgba(255, 164, 143, 0) 138px),
+    radial-gradient(ellipse 11% 34% at 101% 69%, rgba(122, 159, 80, 0.13) 0%, rgba(122, 159, 80, 0.05) 58%, rgba(122, 159, 80, 0) 70%),
+    #fff;
 }
 
 .hero::after {
@@ -432,8 +433,9 @@ button {
   z-index: 0;
   content: "";
   background:
-    radial-gradient(circle at 20% 42%, rgba(255, 255, 255, 0.46) 0%, rgba(255, 255, 255, 0.2) 34%, rgba(255, 255, 255, 0) 62%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0) 66%, #fbfdfb 100%);
+    radial-gradient(ellipse 9% 24% at 99% 50%, rgba(101, 145, 58, 0.1) 0%, rgba(101, 145, 58, 0) 72%),
+    radial-gradient(ellipse 8% 20% at 96% 86%, rgba(139, 174, 91, 0.1) 0%, rgba(139, 174, 91, 0) 74%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 76%, #fbfdfb 100%);
   pointer-events: none;
 }
 
@@ -463,9 +465,9 @@ button {
 }
 
 .hero h1 {
-  max-width: 620px;
-  font-size: clamp(2.35rem, 3.65vw, 4.02rem);
-  line-height: 1.04;
+  max-width: 480px;
+  font-size: clamp(2.55rem, 3vw, 3rem);
+  line-height: 1.08;
 }
 
 .hero-lead,
@@ -484,7 +486,7 @@ button {
 }
 
 .hero-lead {
-  max-width: 590px;
+  max-width: 470px;
   margin: 20px 0 0;
   color: var(--muted-strong);
   font-size: clamp(1rem, 1.15vw, 1.08rem);
@@ -690,17 +692,17 @@ button {
 .hero-product {
   position: relative;
   isolation: isolate;
-  min-height: 562px;
+  min-height: 550px;
   overflow: visible;
 }
 
 .hero-product::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 10px;
   top: 50%;
   z-index: 0;
-  width: min(430px, 68%);
+  width: min(430px, 61%);
   aspect-ratio: 1;
   border-radius: 50%;
   transform: translateY(-50%);
@@ -713,7 +715,7 @@ button {
 .hero-product::after {
   content: "";
   position: absolute;
-  inset: 56px 34px 74px 184px;
+  inset: 44px 8px 70px 178px;
   z-index: 1;
   border: 1px dashed rgba(143, 207, 193, 0.48);
   border-radius: 50%;
@@ -722,7 +724,7 @@ button {
 
 .product-phone {
   position: absolute;
-  left: 48px;
+  left: 72px;
   top: 50%;
   z-index: 5;
   width: min(270px, 42%);
@@ -752,15 +754,15 @@ button {
 
 .stat-card {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 10px;
   align-items: start;
-  padding: 20px;
+  padding: 16px;
 }
 
 .stat-card img {
-  width: 52px;
-  height: 52px;
+  width: 46px;
+  height: 46px;
   object-fit: contain;
 }
 
@@ -781,7 +783,7 @@ button {
 }
 
 .stat-card strong {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1;
 }
 
@@ -795,10 +797,10 @@ button {
 
 .stat-card > i {
   position: absolute;
-  right: 16px;
-  bottom: 14px;
-  width: 34px;
-  height: 34px;
+  right: 13px;
+  bottom: 12px;
+  width: 30px;
+  height: 30px;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -809,18 +811,18 @@ button {
 }
 
 .stat-today {
-  left: clamp(258px, 43%, 332px);
-  top: 54px;
-  width: 190px;
-  min-height: 148px;
+  left: 356px;
+  top: 42px;
+  width: 170px;
+  min-height: 154px;
   background: rgba(237, 247, 243, 0.82);
 }
 
 .stat-revenue {
-  right: 0;
-  top: 146px;
-  width: 236px;
-  min-height: 132px;
+  right: -18px;
+  top: 112px;
+  width: 220px;
+  min-height: 134px;
   border-color: rgba(255, 168, 133, 0.34);
   background: rgba(255, 246, 242, 0.88);
 }
@@ -831,10 +833,10 @@ button {
 }
 
 .appointment-card {
-  left: clamp(298px, 49%, 356px);
-  top: 280px;
-  width: min(300px, calc(100% - 314px));
-  min-width: 286px;
+  left: 386px;
+  top: 220px;
+  width: 238px;
+  min-width: 0;
   display: grid;
   grid-template-columns: 40px minmax(0, 1fr) 9px;
   gap: 13px;
@@ -870,10 +872,10 @@ button {
 }
 
 .timeline-card {
-  left: clamp(304px, 50%, 362px);
-  bottom: 22px;
-  width: min(392px, calc(100% - 320px));
-  min-width: 316px;
+  left: 386px;
+  bottom: 0;
+  width: 328px;
+  min-width: 0;
   padding: 16px 18px 18px;
 }
 
@@ -968,8 +970,8 @@ button {
 
 .hero-spark {
   position: absolute;
-  right: 18px;
-  top: 62px;
+  right: -18px;
+  top: 42px;
   z-index: 3;
   width: 58px;
   height: 58px;
@@ -2377,6 +2379,30 @@ button {
 .reveal.is-visible > *:nth-child(4) { transition-delay: 240ms; }
 .reveal.is-visible > *:nth-child(5) { transition-delay: 320ms; }
 .reveal.is-visible > *:nth-child(6) { transition-delay: 400ms; }
+
+/* ============================================================
+   Responsive — 1280px
+   ============================================================ */
+
+@media (min-width: 1121px) and (max-width: 1280px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 34px);
+    padding-bottom: 42px;
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .hero-product {
+    width: 100%;
+    max-width: 820px;
+    justify-self: center;
+  }
+}
 
 /* ============================================================
    Responsive — 1120px

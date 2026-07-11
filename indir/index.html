@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Randevu Saati indiriliyor</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+      padding: 24px;
+      box-sizing: border-box;
+      color: #18212f;
+      background: #f6f8fb;
+      text-align: center;
+    }
+
+    p {
+      max-width: 320px;
+      margin: 0;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <p id="message">Uygulama mağazası açılıyor...</p>
+
+  <noscript>
+    <p>Bu sayfayı Android veya iPhone cihazınızda açın.</p>
+  </noscript>
+
+  <script>
+    (() => {
+      const playStoreUrl =
+        "https://play.google.com/store/apps/details?id=com.randevumco.app&pcampaignid=web_share";
+      const appStoreUrl =
+        "https://apps.apple.com/tr/app/randevu-saati/id6772236414?l=tr";
+      const userAgent = navigator.userAgent || "";
+
+      const isAndroid = /Android/i.test(userAgent);
+      const isIOS =
+        /iPhone|iPad|iPod/i.test(userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+
+      if (isAndroid) {
+        window.location.replace(playStoreUrl);
+      } else if (isIOS) {
+        window.location.replace(appStoreUrl);
+      } else {
+        document.getElementById("message").textContent =
+          "Lütfen bu QR kodu Android veya iPhone cihazınızla tarayın.";
+      }
+    })();
+  </script>
+</body>
+</html>

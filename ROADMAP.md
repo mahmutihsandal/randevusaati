@@ -4,6 +4,73 @@
 
 Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren premium bir satış ve onboarding deneyimine taşımak.
 
+## Büyüme ve SEO Yol Haritası — 2026-07-28
+
+### Hedef Kitle ve Ölçüm
+
+- Birincil hedef: kuaför, berber ve güzellik salonu sahipleri.
+- Başarı ölçütü yalnızca ziyaretçi sayısı değil; `demo_request_click` (e-posta veya WhatsApp ile demo talebi niyeti) sayısıdır.
+- Google Analytics'te web, iOS ve Android aynı `randevu-satti` mülkünde izlenir. Search Console'da yalnızca kanonik alan adı `https://randevusaati.tr/` takip edilir.
+
+### Tamamlanan Teknik Temel
+
+- [x] Kanonik URL `https://randevusaati.tr/` olarak ayarlandı.
+- [x] Başlık, sosyal paylaşım metaları ve ürün/kurum yapılandırılmış verisi eklendi.
+- [x] `robots.txt` ve `sitemap.xml` yayınlandı.
+- [x] `www.randevusaati.tr` ana alan adına 301 yönlendirmesiyle bağlandı.
+- [x] Search Console mülkü HTML etiketiyle doğrulandı ve sitemap gönderildi.
+- [x] GA4 web akışı kuruldu; sayfa görüntülemeleri ile e-posta/WhatsApp demo CTA tıklamaları ölçülüyor.
+
+### Hat 1 — Yüksek Niyetli Sayfalar
+
+Amaç, "randevu almak isteyen müşteri" yerine doğrudan yazılım arayan salon sahibinin sorgularında görünür olmaktır. Her sayfa kendi hedef kitlesinin dili, örnekleri ve faydalarıyla yazılacak; ana sayfanın kopyası olmayacak.
+
+1. [ ] `/kuafor-randevu-programi/`
+   - Ana sorgu: `kuaför randevu programı`.
+   - Kuaförün telefon/WhatsApp yoğunluğu, hizmet-personel-saat seçimi, takvim ve gelir takibi anlatılacak.
+2. [ ] `/berber-randevu-programi/`
+   - Ana sorgu: `berber randevu programı`.
+   - Sıra, yoğun saat, tek veya çoklu berber, sakal/saç hizmet süreleri üzerinden anlatılacak.
+3. [ ] `/guzellik-salonu-randevu-sistemi/`
+   - Ana sorgu: `güzellik salonu randevu sistemi`.
+   - Uzman bazlı süre, farklı hizmetler ve kapalı saat yönetimine odaklanacak.
+
+Her sayfanın zorunlu yapısı:
+
+- Benzersiz title, meta açıklama, H1 ve sayfa içi soru-cevap bölümü.
+- Hedef işletmeye özgü sorun → çözüm → özellik → paket → demo CTA akışı.
+- Ana sayfaya ve diğer ilgili kategori sayfalarına doğal iç bağlantılar.
+- `Ücretsiz demo al` ve WhatsApp CTA'sı; tıklamalar mevcut Analytics etkinliğiyle ölçülür.
+
+İlk teslim sırası: önce kuaför sayfası yayınlanır, Search Console'a gönderilir; ardından aynı kalıp kopyalanmadan berber ve güzellik salonu sayfalarına uyarlanır.
+
+### Hat 2 — Araç ve Kanıt İçerikleri
+
+Amaç genel blog trafiği değil, salon sahibinin hemen kullanabileceği içerik ile güven kazanmaktır.
+
+1. [ ] `/araclar/salon-ciro-hesaplama/`
+   - Girdiler: personel sayısı, günlük ortalama müşteri, ortalama işlem tutarı ve çalışma günü.
+   - Çıktılar: aylık randevu ve ciro tahmini; sonuç ekranından demo CTA'sı.
+   - İçerik ücretsiz ve form zorunluluğu olmadan kullanılabilir olacak.
+2. [ ] `WhatsApp randevu mesaj şablonları` rehberi
+   - Salon sahibinin doğrudan kopyalayıp kullanabileceği onay, hatırlatma ve iptal metinleri.
+   - Araç sayfasını ve Randevu Saati'nin otomatik randevu akışını doğal biçimde destekleyecek.
+3. [ ] Gerçek müşteri vaka çalışmaları
+   - Yalnızca yazılı izin, doğrulanabilir bilgi ve gerçek müşteri yorumu olduğunda yayınlanır.
+   - Kurulum süresi, kullanım biçimi ve ölçülebilen sonuçlar anlatılır; uydurma logo, yorum veya rakam kullanılmaz.
+
+### Uygulama Sırası ve Karar Kuralları
+
+1. Önce Hat 1'deki üç sayfa; bu, satın alma niyeti en yüksek organik giriş noktasıdır.
+2. Ardından ciro hesaplayıcı; trafik ve site içi demo dönüşümünü birlikte destekler.
+3. İlk gerçek müşteri sonuçları geldikçe vaka çalışmaları eklenir.
+4. Şimdilik il/ilçe bazlı sayfalar veya genel saç-bakım blogları açılmaz. Gerçek işletme/veri olmadan bu tür sayfalar hedef dışı veya zayıf içerik olur.
+5. Her yayın sonrası Search Console'da indeksleme, Analytics'te `demo_request_click` ve kaynak/kanal raporu kontrol edilir.
+
+### Sıradaki Somut İş
+
+`/kuafor-randevu-programi/` sayfasının bilgi mimarisi, metni ve statik sayfa yapısı hazırlanacak. Bu sayfa; kategoriye özel satış mesajı, özellik kanıtı, paket yönlendirmesi ve demo CTA'sını tek hedefte birleştirecek.
+
 ## İçerik Mimarisi
 
 1. Hero

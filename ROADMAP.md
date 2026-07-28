@@ -25,8 +25,8 @@ Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren
 
 Amaç, "randevu almak isteyen müşteri" yerine doğrudan yazılım arayan salon sahibinin sorgularında görünür olmaktır. Her sayfa kendi hedef kitlesinin dili, örnekleri ve faydalarıyla yazılacak; ana sayfanın kopyası olmayacak.
 
-1. [x] `/kuafor-randevu-programi/` — yayınlandı; 28 Temmuz 2026'da Google indeks isteği gönderildi.
-   - Ana sorgu: `kuaför randevu programı`.
+1. [x] `/kuafor-randevu-programi/` — yayınlandı; ana hedef 28 Temmuz 2026'da `kuaför randevu sistemi` olarak güncellendi.
+   - Ana sorgu: `kuaför randevu sistemi`; ikincil sorgu: `kuaför randevu programı`.
    - Kuaförün telefon/WhatsApp yoğunluğu, hizmet-personel-saat seçimi, takvim ve gelir takibi anlatılacak.
 2. [x] `/berber-randevu-programi/` — yayınlandı; Google sitemap işlemesinden sonra indeks isteği gönderilecek.
    - Ana sorgu: `berber randevu programı`.

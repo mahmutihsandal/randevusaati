@@ -25,13 +25,13 @@ Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren
 
 Amaç, "randevu almak isteyen müşteri" yerine doğrudan yazılım arayan salon sahibinin sorgularında görünür olmaktır. Her sayfa kendi hedef kitlesinin dili, örnekleri ve faydalarıyla yazılacak; ana sayfanın kopyası olmayacak.
 
-1. [ ] `/kuafor-randevu-programi/`
+1. [x] `/kuafor-randevu-programi/` — yayınlandı; 28 Temmuz 2026'da Google indeks isteği gönderildi.
    - Ana sorgu: `kuaför randevu programı`.
    - Kuaförün telefon/WhatsApp yoğunluğu, hizmet-personel-saat seçimi, takvim ve gelir takibi anlatılacak.
-2. [ ] `/berber-randevu-programi/`
+2. [x] `/berber-randevu-programi/` — yayınlandı; Google sitemap işlemesinden sonra indeks isteği gönderilecek.
    - Ana sorgu: `berber randevu programı`.
    - Sıra, yoğun saat, tek veya çoklu berber, sakal/saç hizmet süreleri üzerinden anlatılacak.
-3. [ ] `/guzellik-salonu-randevu-sistemi/`
+3. [x] `/guzellik-salonu-randevu-sistemi/` — yayınlandı; Google sitemap işlemesinden sonra indeks isteği gönderilecek.
    - Ana sorgu: `güzellik salonu randevu sistemi`.
    - Uzman bazlı süre, farklı hizmetler ve kapalı saat yönetimine odaklanacak.
 
@@ -42,7 +42,7 @@ Her sayfanın zorunlu yapısı:
 - Ana sayfaya ve diğer ilgili kategori sayfalarına doğal iç bağlantılar.
 - `Ücretsiz demo al` ve WhatsApp CTA'sı; tıklamalar mevcut Analytics etkinliğiyle ölçülür.
 
-İlk teslim sırası: önce kuaför sayfası yayınlanır, Search Console'a gönderilir; ardından aynı kalıp kopyalanmadan berber ve güzellik salonu sayfalarına uyarlanır.
+İlk teslim sırası tamamlandı: üç sektörel sayfa, sektöre uyarlanmış metinlerle yayınlandı. Kuaför sayfası için indeks isteği gönderildi; diğer iki sayfa için sitemap işlenmesi takiben aynı işlem uygulanacak.
 
 ### Hat 2 — Araç ve Kanıt İçerikleri
 
@@ -69,7 +69,7 @@ Amaç genel blog trafiği değil, salon sahibinin hemen kullanabileceği içerik
 
 ### Sıradaki Somut İş
 
-`/kuafor-randevu-programi/` sayfasının bilgi mimarisi, metni ve statik sayfa yapısı hazırlanacak. Bu sayfa; kategoriye özel satış mesajı, özellik kanıtı, paket yönlendirmesi ve demo CTA'sını tek hedefte birleştirecek.
+Hat 2'deki `/araclar/salon-ciro-hesaplama/` aracı hazırlanacak. Araç, form gerektirmeden aylık randevu ve ciro tahmini vermeli; sonuçta doğal bir demo CTA'sı göstermelidir.
 
 ## İçerik Mimarisi
 

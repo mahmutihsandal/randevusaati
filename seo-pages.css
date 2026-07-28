@@ -294,6 +294,39 @@
   color: #0d2c37;
 }
 
+.seo-sector-section {
+  border-top: 1px solid #e3efec;
+}
+
+.seo-sector-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.seo-sector-links a {
+  display: grid;
+  gap: 7px;
+  padding: 22px;
+  border: 1px solid #deece8;
+  border-radius: 16px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.seo-sector-links a:hover {
+  transform: translateY(-2px);
+  border-color: var(--mint-strong);
+}
+
+.seo-sector-links span {
+  color: #617482;
+  font-size: 0.92rem;
+}
+
 .seo-faq-layout {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
@@ -320,6 +353,10 @@
   }
 
   .seo-value-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-sector-links {
     grid-template-columns: 1fr;
   }
 

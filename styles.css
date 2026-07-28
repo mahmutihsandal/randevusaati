@@ -421,9 +421,12 @@ button {
   z-index: 0;
   content: "";
   background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.84) 38%, rgba(255, 255, 255, 0.62) 70%, rgba(255, 255, 255, 0.42) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0.16) 54%, #fbfdfb 100%),
     radial-gradient(ellipse 34% 62% at 61% 58%, rgba(143, 207, 193, 0.2) 0%, rgba(143, 207, 193, 0.1) 47%, rgba(143, 207, 193, 0) 72%),
     radial-gradient(circle at 75% 24%, rgba(255, 164, 143, 0) 0 132px, rgba(255, 164, 143, 0.12) 133px 137px, rgba(255, 164, 143, 0) 138px),
     radial-gradient(ellipse 11% 34% at 101% 69%, rgba(122, 159, 80, 0.13) 0%, rgba(122, 159, 80, 0.05) 58%, rgba(122, 159, 80, 0) 70%),
+    url("./assets/marketing/salon-hero-background.png") center / cover no-repeat,
     #fff;
 }
 

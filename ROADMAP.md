@@ -21,6 +21,27 @@ Web sitesini basit ürün tanıtım sayfasından, salon sahiplerine güven veren
 - [x] Search Console mülkü HTML etiketiyle doğrulandı ve sitemap gönderildi.
 - [x] GA4 web akışı kuruldu; sayfa görüntülemeleri ile e-posta/WhatsApp demo CTA tıklamaları ölçülüyor.
 
+### Google SEO Başlangıç Kılavuzu Uyum Kontrolü — 2026-07-29
+
+Google'ın rehberindeki amaç, sayfaları "anahtar kelime ile doldurmak" değil; Google'ın ve salon sahibinin ürünü kolayca bulup anlayabilmesidir. Mevcut durum:
+
+| Rehber maddesi | Durum | Not |
+| --- | --- | --- |
+| Google'ın sayfaları bulması | Tamam | `robots.txt`, sitemap, Search Console ve ana sayfadan iç bağlantılar hazır. |
+| Tek ve doğru site adresi | Tamam | Kanonik adres `https://randevusaati.tr/`; `www` sürümü buna yönlenir. |
+| Açıklayıcı URL, başlık ve açıklama | Tamam | Ana sayfa ile üç sektör sayfasında her biri için özgün title, meta açıklama ve H1 var. |
+| Kullanıcı odaklı, özgün içerik | Kısmen tamam | Sektör sayfaları gerçek salon iş akışını anlatıyor. Araç, mesaj şablonu ve gerçek vaka çalışması henüz eksik. |
+| Görsellerin anlaşılabilir olması | Tamam | İçerik taşıyan görsellerde açıklayıcı `alt` metni; dekoratif ikonlarda boş `alt` kullanılıyor. |
+| Anlamlı iç bağlantılar | Kısmen tamam | Ana sayfa üç sektör sayfasına, her sektör sayfası ana sayfaya bağlı. İlgili sektör sayfaları arasında doğal bağlama göre ek bağlantılar sonraki içerik turunda eklenecek. |
+| Mobil deneyim ve hız | Ölçülecek | Canlı sitede ayrı bir mobil/Core Web Vitals denetimi henüz yapılmadı. |
+| Arama performansını izleme | Başlatıldı | GA4 ve Search Console kurulu; yeni sayfalarda yeterli sorgu verisinin oluşması bekleniyor. |
+
+Bilerek yapılmayacaklar:
+
+- `meta keywords` etiketi eklemek: Google bunu sıralama için kullanmaz.
+- Aynı kelimeyi metne zorla tekrar etmek: kullanıcı deneyimini bozar ve anahtar kelime doldurma riski yaratır.
+- Sırf anahtar kelime için mevcut URL'leri değiştirmek: mevcut açıklayıcı URL'ler yeterli; değişiklik ancak gerçek bir ürün/URL mimarisi ihtiyacında yapılır.
+
 ### Hat 1 — Yüksek Niyetli Sayfalar
 
 Amaç, "randevu almak isteyen müşteri" yerine doğrudan yazılım arayan salon sahibinin sorgularında görünür olmaktır. Her sayfa kendi hedef kitlesinin dili, örnekleri ve faydalarıyla yazılacak; ana sayfanın kopyası olmayacak.
@@ -28,10 +49,10 @@ Amaç, "randevu almak isteyen müşteri" yerine doğrudan yazılım arayan salon
 1. [x] `/kuafor-randevu-programi/` — yayınlandı; ana hedef 28 Temmuz 2026'da `kuaför randevu sistemi` olarak güncellendi.
    - Ana sorgu: `kuaför randevu sistemi`; ikincil sorgular: `kuaför randevu`, `kuaför randevu programı`, `online kuaför randevu sistemi`, `kuaför randevu uygulaması`.
    - Kuaförün telefon/WhatsApp yoğunluğu, hizmet-personel-saat seçimi, takvim ve gelir takibi anlatılacak.
-2. [x] `/berber-randevu-programi/` — yayınlandı; Google sitemap işlemesinden sonra indeks isteği gönderilecek.
+2. [x] `/berber-randevu-programi/` — yayınlandı; indeksleme isteği gönderildi.
    - Ana sorgu: `berber randevu sistemi`; ikincil sorgular: `berber randevu`, `berber randevu programı`, `berber randevu uygulaması`.
    - Sıra, yoğun saat, tek veya çoklu berber, sakal/saç hizmet süreleri üzerinden anlatılacak.
-3. [x] `/guzellik-salonu-randevu-sistemi/` — yayınlandı; Google sitemap işlemesinden sonra indeks isteği gönderilecek.
+3. [x] `/guzellik-salonu-randevu-sistemi/` — yayınlandı; indeksleme isteği gönderildi.
    - Ana sorgu: `güzellik salonu randevu sistemi`.
    - Uzman bazlı süre, farklı hizmetler ve kapalı saat yönetimine odaklanacak.
 
@@ -42,7 +63,27 @@ Her sayfanın zorunlu yapısı:
 - Ana sayfaya ve diğer ilgili kategori sayfalarına doğal iç bağlantılar.
 - `Ücretsiz demo al` ve WhatsApp CTA'sı; tıklamalar mevcut Analytics etkinliğiyle ölçülür.
 
-İlk teslim sırası tamamlandı: üç sektörel sayfa, sektöre uyarlanmış metinlerle yayınlandı. Kuaför sayfası için indeks isteği gönderildi; diğer iki sayfa için sitemap işlenmesi takiben aynı işlem uygulanacak.
+İlk teslim sırası tamamlandı: üç sektörel sayfa, sektöre uyarlanmış metinlerle yayınlandı ve her biri için indeksleme isteği gönderildi. Sayfada anlamlı bir güncelleme yapılmadıkça yeniden istek gönderilmez; Google'ın tarama ve değerlendirme süreci beklenir.
+
+### Hat 1.5 — Ölçüm, Deneyim ve İyileştirme Döngüsü
+
+Bu hat, yayınlanan SEO çalışmalarının gerçekten doğru sorgulara ulaşıp ulaşmadığını ölçmek içindir. Her kontrolün amacı yeni metin eklemek değil, bir sonraki kararı veriye dayandırmaktır.
+
+1. [ ] **5–12 Ağustos 2026: İlk Search Console kontrolü**
+   - Performans → Sorgular'da `kuaför randevu sistemi`, `kuaför randevu programı`, `berber randevu sistemi` ve `güzellik salonu randevu sistemi` gösterimlerini kontrol et.
+   - URL Denetimi'nde üç sektörel sayfanın son tarama tarihini kontrol et.
+   - Henüz veri yoksa yeni indeksleme isteği göndermeden bir hafta daha bekle.
+2. [ ] **12–26 Ağustos 2026: İlk yön kararı**
+   - Gösterim alan sorguları, sayfa ve ortalama konumu kaydet.
+   - Yalnızca veri, sorgu ile sayfa metni arasında gerçek bir eksik gösterirse sayfayı güncelle.
+   - Sitemap'taki `lastmod` tarihini yalnızca anlamlı bir sayfa değişikliğinde güncelle.
+3. [ ] **Mobil ve hız denetimi**
+   - Ana sayfa ve kuaför sayfası için mobil PageSpeed Insights/Core Web Vitals kontrolü yap.
+   - Ortaya çıkan somut sorunları (büyük görsel, gereksiz JavaScript, düzen kayması gibi) önceliklendir; puan uğruna ürün içeriğini bozma.
+4. [ ] **Güven kanıtı**
+   - Uygulama mağazası bağlantılarını güncel tut.
+   - Yazılı izin ve doğrulanabilir sonuç olduğunda gerçek salon vaka çalışması ekle.
+   - Yapay yorum, uydurma istatistik veya ücretli/spam bağlantı satın alma yapılmaz.
 
 ### Hat 2 — Araç ve Kanıt İçerikleri
 
@@ -69,7 +110,7 @@ Amaç genel blog trafiği değil, salon sahibinin hemen kullanabileceği içerik
 
 ### Sıradaki Somut İş
 
-Hat 2'deki `/araclar/salon-ciro-hesaplama/` aracı hazırlanacak. Araç, form gerektirmeden aylık randevu ve ciro tahmini vermeli; sonuçta doğal bir demo CTA'sı göstermelidir.
+Önce Hat 1.5 kapsamındaki mobil/hız denetimi yapılacak ve Search Console için ilk ölçüm tarihi beklenecek. Ardından Hat 2'deki `/araclar/salon-ciro-hesaplama/` aracı hazırlanacak. Araç, form gerektirmeden aylık randevu ve ciro tahmini vermeli; sonuçta doğal bir demo CTA'sı göstermelidir.
 
 ## İçerik Mimarisi
 

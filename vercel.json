@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/isletme/:path*",
+      "destination": "https://randevu-satti.web.app/isletme/:path*"
+    }
+  ]
+}

@@ -13,6 +13,28 @@ const pricingCtaOverlay = document.querySelector(".pricing-cta-overlay");
 const heroSection = document.querySelector("#top");
 const finalCtaSection = document.querySelector(".section-final");
 
+function trackAnalyticsEvent(name, parameters = {}) {
+  if (typeof window.gtag !== "function") return;
+
+  window.gtag("event", name, parameters);
+}
+
+function ctaLabel(link) {
+  return (link.textContent || "")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 80);
+}
+
+document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
+  link.addEventListener("click", () => {
+    trackAnalyticsEvent("demo_request_click", {
+      contact_method: "email",
+      cta_label: ctaLabel(link),
+    });
+  });
+});
+
 function setBilling(period) {
   billingButtons.forEach((button) => {
     const isActive = button.dataset.billing === period;
@@ -117,7 +139,13 @@ setupWhatsAppLink();
 whatsappLink?.addEventListener("click", (event) => {
   if (whatsappLink.getAttribute("aria-disabled") === "true") {
     event.preventDefault();
+    return;
   }
+
+  trackAnalyticsEvent("demo_request_click", {
+    contact_method: "whatsapp",
+    cta_label: ctaLabel(whatsappLink),
+  });
 });
 
 function setupFloatingPricingCta() {

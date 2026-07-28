@@ -1003,6 +1003,10 @@ button {
   background: #f5faf8;
 }
 
+.section-download {
+  background: linear-gradient(135deg, #eff9f6, #f8fcfb);
+}
+
 .section-panel {
   color: #edf8f5;
   background:
@@ -1114,6 +1118,103 @@ button {
   color: #617482;
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+.download-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(210px, 0.34fr);
+  gap: clamp(34px, 8vw, 110px);
+  align-items: center;
+}
+
+.download-copy {
+  max-width: 700px;
+}
+
+.download-copy h2 {
+  margin: 10px 0 14px;
+  color: var(--ink-strong);
+  font-size: clamp(2rem, 3.28vw, 3.02rem);
+  line-height: 1.08;
+}
+
+.download-copy > p:not(.eyebrow) {
+  max-width: 630px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.store-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 27px;
+}
+
+.store-badge {
+  display: grid;
+  min-width: 152px;
+  gap: 2px;
+  padding: 10px 16px;
+  border-radius: 13px;
+  color: #fff;
+  background: var(--ink-strong);
+  box-shadow: 0 12px 25px rgba(7, 20, 33, 0.14);
+  text-decoration: none;
+  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.store-badge:hover,
+.store-badge:focus-visible {
+  transform: translateY(-2px);
+  background: #123f4a;
+  box-shadow: 0 16px 32px rgba(7, 20, 33, 0.2);
+  outline: none;
+}
+
+.store-badge span {
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.02em;
+}
+
+.store-badge strong {
+  font-size: 1.02rem;
+  line-height: 1.1;
+}
+
+.download-qr {
+  justify-self: end;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  width: min(100%, 230px);
+  padding: 14px;
+  border: 1px solid #d7e9e4;
+  border-radius: 20px;
+  background: #fff;
+  color: #567080;
+  font-size: 0.84rem;
+  font-weight: 850;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 18px 36px rgba(7, 20, 33, 0.08);
+  transition: transform var(--transition-base), border-color var(--transition-base);
+}
+
+.download-qr:hover,
+.download-qr:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--mint);
+  outline: none;
+}
+
+.download-qr img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 9px;
 }
 
 /* ============================================================
@@ -2600,6 +2701,14 @@ button {
 
   .solution-links {
     grid-template-columns: 1fr;
+  }
+
+  .download-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .download-qr {
+    justify-self: start;
   }
 
   .pricing-head,

@@ -35,6 +35,15 @@ document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
   });
 });
 
+document.querySelectorAll("[data-store]").forEach((link) => {
+  link.addEventListener("click", () => {
+    trackAnalyticsEvent("app_store_click", {
+      store: link.dataset.store,
+      cta_label: ctaLabel(link),
+    });
+  });
+});
+
 function setBilling(period) {
   billingButtons.forEach((button) => {
     const isActive = button.dataset.billing === period;
